@@ -34,7 +34,9 @@
 #define popn(stack, amt)                                                       \
   ((stack_ele(stack) < amt) ? ((t_stack)(long)(stack_err(0)))                  \
                             : popn_(stack, amt))
-
+#define ferr(str)                                                              \
+  printf(str);                                                                 \
+  exit(1);
 #define stack_err(o)                                                           \
-  ((o) ? printf("stack overflow\n") : printf("stack underflow\n"))
+  ((o) ? ferr("stack overflow\n") : ferr("stack underflow\n"))
 // ((o) ? ferr("Stack overflow\n") : ferr("Stack underflow\n"))
