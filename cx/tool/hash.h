@@ -2,7 +2,7 @@
 #define __HASH_H
 #include "debug.h"
 
-typedef struct BUCKET {
+typedef struct BUCKET { /* two pointer total 16 bytes */
   struct BUCKET *next;
   struct BUCKET **prev;
 } BUCKET;
@@ -10,8 +10,8 @@ typedef struct BUCKET {
 typedef struct hash_tab_ {
   int size;                      /*Maxnumber of elements in table */
   int numsyms;                   /*number of elements currently in table*/
-  unsigned(*hash) P((void *));   /*hash function*/
-  int(*cmp) P((void *, void *)); /*comparsion funct,cmp(name,bucket_p);*/
+  unsigned(*hash) (void *);   /*hash function*/
+  int(*cmp) (void *, void *); /*comparsion funct,cmp(name,bucket_p);*/
   BUCKET *table[1];              /*First element of actual hash table*/
 } HASH_TAB;
 
