@@ -7,21 +7,21 @@
 #include <cstring>
 
 PUBLIC void *newsym(int size) {
-  /*Allocate space for new symbol
-   * return a pointer to the user space*/
+  /*Allocate space for new symbol,return a pointer to the user space*/
   BUCKET *sym;
   if (!(sym = (BUCKET *)calloc(size + sizeof(BUCKET), 1))) {
     fprintf(stderr, "Can't get memory for BUCKET\n");
-    kill(getpid(),
-         SIGABRT); /* substitute raise(SIGABRT) with kill(getpid(),SIGABRT)*/
-    /*SIGABRT represent program exit because of exception */
+    raise(SIGABRT);
     return NULL;
   }
   return (void *)(sym + 1); /*return pointer to user space*/
 }
 
 /*--------------------------------------------------------*/
-PUBLIC void freesym(void *sym) { free((BUCKET *)sym - 1); }
+PUBLIC void freesym(void *sym) {
+  /* backs up the sym pointer to its original position*/
+  free((BUCKET *)sym - 1);
+}
 
 PUBLIC HASH_TAB *maketab(unsigned maxsym, unsigned (*hash_function)(void *),
                          int (*cmp_function)(void *, void *)) {
@@ -29,19 +29,18 @@ PUBLIC HASH_TAB *maketab(unsigned maxsym, unsigned (*hash_function)(void *),
   HASH_TAB *p;
   if (!maxsym)
     maxsym = 127;
-  /* |<----space for table ----->|<---- and header ---->|*/
-  if ((p = (HASH_TAB *)calloc(1, (maxsym * sizeof(BUCKET *)) +
-                                     sizeof(HASH_TAB)))) {
+  // clang-format off
+                              /* |<---space for table ---->|<---- and header ---->|*/
+  if ((p = (HASH_TAB *)calloc(1, (maxsym * sizeof(BUCKET *)) + sizeof(HASH_TAB)))) {
+    /* take advantage of cpp doesn't check array-boundary */
+    // clang-format on
     p->size = maxsym;
     p->numsyms = 0;
-    ANSI(p->hash = (unsigned (*)(void *) hash_function));
-    UNIX(p->hash = hash_function);
-    ANSI(p->cmp = (int (*)(void *, void *))cmp_function);
-    UNIX(p->cmp = cmp_function);
+    p->hash = hash_function;
+    p->cmp = cmp_function;
   } else {
     fprintf(stderr, "insufficent memory for symbol table\n");
-    kill(getpid(),
-         SIGABRT); /*substitute raise(SIGABRT) with kill(getpid(),SIGABRT)*/
+    raise(SIGABRT);
     return NULL;
   }
   return p;
@@ -51,7 +50,7 @@ PUBLIC void *addsym(HASH_TAB *tabp, void *isym) {
   /*Add a symbol to the hash table*/
   BUCKET **p, *tmp;
   BUCKET *sym = (BUCKET *)(isym);
-  p = &(tabp->table)[(*tabp->hash)(sym--) % tabp->size];
+  p = &(tabp->table)[(*tabp->hash)(sym--) % tabp->size]; /* sym decrement */
   tmp = *p;
   *p = sym;
   sym->prev = p;
