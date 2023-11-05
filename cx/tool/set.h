@@ -1,4 +1,6 @@
 /*SET.H  Macros and function prototypes for the set functions */
+#include"debug.h"
+#include<cstdio>
 typedef unsigned short _SETTYPE; /*one cell in bit map(two bytes())*/
 #define _BITS_IN_WORD 16
 #define _BYTES_IN_ARRAY(x)                                                     \
@@ -15,8 +17,8 @@ _DIV_WSIZE(35) evaluates to 35/16 = 2 --- 3 .so the value is 2*/
    << 3) /*expand the size of array,grows in _DEFWORDS-sized chunks*/
 
 typedef struct _set_ {
-  unsigned char nwords;       /*Number of words in map*/
-  unsigned char comple;       /*is set to true if a negative-true set*/
+  unsigned nwords;       /*Number of words in map*/
+  unsigned char ccompl;       /*is set to true if a negative-true set*/
   unsigned nbits;             /*Number of bits in map*/
   _SETTYPE *map;              /*Pointer to the map*/
   _SETTYPE defmap[_DEFWORDS]; /*The map itself.when the map grows,a new array is
@@ -31,11 +33,11 @@ extern void invert(SET *);
 extern SET *newset(void);
 extern int next_number(SET *);
 extern int num_ele(SET *);
-extern void pset(SET *, int (*)(), void *);
+extern void pset(SET *,  int(*)(FILE*,const char*,...), void *);
 extern void _set_op(int, SET *, SET *);
 extern int _set_test(SET *, SET *);
 extern int setcmp(SET *, SET *);
-extern int sethash(SET *);
+extern unsigned sethash(SET *);
 extern int subset(SET *, SET *);
 extern void truncate(SET *);
 
@@ -77,4 +79,4 @@ extern void truncate(SET *);
   (((x) >= (s)->nbits) ? _addset(s, x)                                         \
                        : _GBIT(s, x, |=)) /*put the corresponding position 1*/
 #define MEMBER(s, x) (((x) >= (s)->nbits) ? 0 : _GBIT(s, x, &))
-#define TEST(s, x) ((MENBER(s, x)) ? !(s)->compl : (s)->compl )
+#define TEST(s, x) ((MEMBER(s, x)) ? !(s)->ccompl : (s)->ccompl )

@@ -17,7 +17,7 @@
 #define UX(x) x
 #define O_BINARY 0 /*no binary input mode in UNIX open()*/
 typedef long time_t;     /*for the VAX,may have to change this*/
-typedef unsigned size_t; /*for the VAX,may have to change this*/
+// typedef unsigned size_t; /*for the VAX,may have to change this*/
 extern char *strdup();   /*You need to supply one*/
 #endif
 

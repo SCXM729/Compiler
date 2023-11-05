@@ -8,7 +8,9 @@
 
 PUBLIC void *newsym(int size) {
   /*Allocate space for new symbol,return a pointer to the user space*/
+
   BUCKET *sym;
+
   if (!(sym = (BUCKET *)calloc(size + sizeof(BUCKET), 1))) {
     fprintf(stderr, "Can't get memory for BUCKET\n");
     raise(SIGABRT);
@@ -26,7 +28,9 @@ PUBLIC void freesym(void *sym) {
 PUBLIC HASH_TAB *maketab(unsigned maxsym, unsigned (*hash_function)(void *),
                          int (*cmp_function)(void *, void *)) {
   /*Make a hash table of the indicated size*/
+
   HASH_TAB *p;
+
   if (!maxsym)
     maxsym = 127;
   // clang-format off
@@ -48,15 +52,20 @@ PUBLIC HASH_TAB *maketab(unsigned maxsym, unsigned (*hash_function)(void *),
 
 PUBLIC void *addsym(HASH_TAB *tabp, void *isym) {
   /*Add a symbol to the hash table*/
+  
   BUCKET **p, *tmp;
   BUCKET *sym = (BUCKET *)(isym);
+  
   p = &(tabp->table)[(*tabp->hash)(sym--) % tabp->size]; /* sym decrement */
+  
   tmp = *p;
   *p = sym;
   sym->prev = p;
   sym->next = tmp;
+  
   if (tmp)
     tmp->prev = &sym->next;
+  
   tabp->numsyms++;
   return (void *)(sym + 1);
 }
@@ -66,10 +75,13 @@ PUBLIC void delsym(HASH_TAB *tabp, void *isym) {
    * from a previous findsym() call.It points initially at the user
    * space,but is decrement to get at the BUCKET header
    */
+  
   BUCKET *sym = (BUCKET *)isym;
+  
   if (tabp && sym) {
     --tabp->numsyms;
     --sym;
+  
     if (*(sym->prev) == sym->next)
       sym->next->prev = sym->prev;
   }

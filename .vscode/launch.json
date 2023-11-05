@@ -15,7 +15,7 @@
             "type": "lldb",
             "request": "launch",
             "name": "Debug",
-            "program": "${workspaceFolder}/cx/tool/test",
+            "program": "${workspaceFolder}/cx/test/build/setTest",
             "args": [],
             "cwd": "${workspaceFolder}"
         }

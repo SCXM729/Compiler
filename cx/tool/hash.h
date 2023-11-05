@@ -4,15 +4,21 @@
 
 typedef struct BUCKET { /* two pointer total 16 bytes */
   struct BUCKET *next;
+  /* the head of chain is a simple pointer, not an entire BUCKET structure.The
+   * backwards pointer for the leftmost node in the chain points at the
+   * head-of-chain pointer. All other backwards pointer hold the address of the
+   * next field from the previous node
+   */
+
   struct BUCKET **prev;
 } BUCKET;
 
 typedef struct hash_tab_ {
-  int size;                      /*Maxnumber of elements in table */
-  int numsyms;                   /*number of elements currently in table*/
-  unsigned(*hash) (void *);   /*hash function*/
-  int(*cmp) (void *, void *); /*comparsion funct,cmp(name,bucket_p);*/
-  BUCKET *table[1];              /*First element of actual hash table*/
+  int size;                   /*Maxnumber of elements in table */
+  int numsyms;                /*number of elements currently in table*/
+  unsigned (*hash)(void *);   /*hash function*/
+  int (*cmp)(void *, void *); /*comparsion funct,cmp(name,bucket_p);*/
+  BUCKET *table[1];           /*First element of actual hash table*/
 } HASH_TAB;
 
 typedef void (*ptab_t)(void *, ...); /*print argument to ptab*/

@@ -1,0 +1,5 @@
+/home/sheep/CompilerDesignInC-modern/cx/test/build/CMakeFiles/set.dir
+/home/sheep/CompilerDesignInC-modern/cx/test/build/CMakeFiles/setTest.dir
+/home/sheep/CompilerDesignInC-modern/cx/test/build/CMakeFiles/hashTest.dir
+/home/sheep/CompilerDesignInC-modern/cx/test/build/CMakeFiles/edit_cache.dir
+/home/sheep/CompilerDesignInC-modern/cx/test/build/CMakeFiles/rebuild_cache.dir
