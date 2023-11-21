@@ -4,7 +4,7 @@
 #include <cctype>
 #include <cstdio>
 
-/* nfa -> dfa */
+/* implement nfa */
 
 PUBLIC int nfa(char *(*)());
 PUBLIC void free_nfa(void);
@@ -119,95 +119,95 @@ PUBLIC SET *move(SET *inp_set, int c) {
 
 #ifdef MAIN
 #define ALLOCATE
-#include"globals.h"  /* extension for verbose */
+#include "globals.h" /* extension for verbose */
 
 #define BSIZE 256
 
-PRIVATE char Buf[BSIZE]; /* input buffer */
-PRIVATE char *Pbuf=Buf; /* current position in input buffer */
-PRIVATE char* Expr;  /* regular expression from command line */
-PRIVATE char* Expr; /* regular expression from command line */
+PRIVATE char Buf[BSIZE];  /* input buffer */
+PRIVATE char *Pbuf = Buf; /* current position in input buffer */
+PRIVATE char *Expr;       /* regular expression from command line */
+PRIVATE char *Expr;       /* regular expression from command line */
 
-int nextchar(){
-  if(!Pbuf){
-    if(!fgets(Buf,BSIZE,stdin))
+int nextchar() {
+  if (!Pbuf) {
+    if (!fgets(Buf, BSIZE, stdin))
       return null;
-    Pbuf=Buf;
+    Pbuf = Buf;
   }
   return *Pbuf++;
 }
 
-PRIVATE void printfbuf(){
-  fputs(Buf,stdout); /* print the buffer and force a read */
-  *Pbuf=0;  /* on the next call to nextchar() */
+PRIVATE void printfbuf() {
+  fputs(Buf, stdout); /* print the buffer and force a read */
+  *Pbuf = 0;          /* on the next call to nextchar() */
 }
 
-PRIVATE char*getline(){
-  static int first_time_called =1;
-  if(!first_time_called)
+PRIVATE char *getline() {
+  static int first_time_called = 1;
+  if (!first_time_called)
     return NULL;
 
-  first_time_called=0;
+  first_time_called = 0;
   return Expr;
 }
 
-int main(int argc,char*argv[]){
-  int sstate; /* Starting NFA state */
-  SET*start_dfastate; /* Set of starting nfa states */
-  SET*current; /* current DFA state */
-  SET*next;
+int main(int argc, char *argv[]) {
+  int sstate;          /* Starting NFA state */
+  SET *start_dfastate; /* Set of starting nfa states */
+  SET *current;        /* current DFA state */
+  SET *next;
   int accept; /* cur. DFA state is an accept */
-  int c; /* current input character */
+  int c;      /* current input character */
   int anchor;
 
-  if(argc==2)
-    fprintf(stderr,"expression is %s \n",argv[1]);
-  else{
-    fprintf(stderr,"usage: terp pattern <input\n");
+  if (argc == 2)
+    fprintf(stderr, "expression is %s \n", argv[1]);
+  else {
+    fprintf(stderr, "usage: terp pattern <input\n");
     exit(1)
   }
 
   /* 1): Compile the NFA; initialize move() & e_closure().
-  * 2): Create the initial state, the set of all NFA states 
-  * that can be reached by making epsilon transition from 
-  * the NFA start state.
-  * 3): Initialize the current state to the start state
-  */
+   * 2): Create the initial state, the set of all NFA states
+   * that can be reached by making epsilon transition from
+   * the NFA start state.
+   * 3): Initialize the current state to the start state
+   */
 
-  Expr=argv[1];
+  Expr = argv[1];
 
-  sstate=nfa(getline);
+  sstate = nfa(getline);
 
-  next=newset();
-  ADD(next,sstate);
-  if(!(start_dfastate=e_closure(next,&accept,&anchor))){
-    fprintf(stderr,"Internal error: State machine is empty\n");
+  next = newset();
+  ADD(next, sstate);
+  if (!(start_dfastate = e_closure(next, &accept, &anchor))) {
+    fprintf(stderr, "Internal error: State machine is empty\n");
     exit(1);
   }
 
-  current=newset();
-  assign(current,start_dfastate);
+  current = newset();
+  assign(current, start_dfastate);
 
   /* Now interpret the NFA: The next state is the set of all NFA states that
-    * can be reached after we've made a transition on the current input character
-    * from any of the NFA states in the current state. The current input line is 
-    * printed every time an accept state is encountered. The machine is reset to
-    * the initial state when a failure transition is encountered
-    */
+   * can be reached after we've made a transition on the current input character
+   * from any of the NFA states in the current state. The current input line is
+   * printed every time an accept state is encountered. The machine is reset to
+   * the initial state when a failure transition is encountered
+   */
 
-  while(c=nextchar()){
-    if(next=e_closure(move(current,c),&accept,&achor)){
-      if(accept)
-        printbuf();    /*  accept */
-      else{
+  while (c = nextchar()) {
+    if (next = e_closure(move(current, c), &accept, &achor)) {
+      if (accept)
+        printbuf(); /*  accept */
+      else {
         delset(current); /* keep looking */
-        current=next;
+        current = next;
         continue;
       }
     }
 
     delset(next); /* reset */
-    assigne(current,start_dfastate);
+    assigne(current, start_dfastate);
   }
 }
 #endif
