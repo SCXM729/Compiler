@@ -23,7 +23,7 @@ typedef struct hash_tab_ {
 
 typedef void (*ptab_t)(void *, ...); /*print argument to ptab*/
 
-extern HASH_TAB *maketab P((unsigned maxsym, unsigned (*hash)(), int (*cmp)()));
+extern HASH_TAB *maketab P((unsigned maxsym, unsigned (*hash)(void*), int (*cmp)(void*,void*)));
 extern void *newsym P((int size));
 extern void freesym P((void *sym));
 extern void *addsym P((HASH_TAB * tabp, void *sym));

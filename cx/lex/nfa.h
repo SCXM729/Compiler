@@ -1,6 +1,7 @@
+#include"../tool/set.h"
 typedef struct NFA {
     int edge; /*Label for edge:character,CCL,EMPTY,or EPSILON*/
-    SET* bitset /*Set to stroe character classes*/
+    SET* bitset; /*Set to stroe character classes*/
         struct NFA* next; /*Next state (or NULL if none)*/
     struct NFA* next2; /*Another next state if edge==EPSILON
       NULL of this state isn't used*/
