@@ -116,4 +116,40 @@ PUBLIC int pairs(FILE *fp, ATYPE *array, int nrows, int ncols, int name,
   return num_cells;
 }
 
+PUBLIC void pnext(FILE *fp, char *name) {
+  /* Print out a next(state,c) subroutines for a table compressed
+   * into char/next-state pairs by the routines in pairs.cpp
+   */
 
+  // clang-format off
+  static char*toptext[]={
+    "unsigned in c;",
+    "int cur_state;",
+    "{",
+    "/* Given the current state and the current input character,return",
+    "* the next state",
+    " */",
+    "",
+    NULL,
+  };
+  static char*boptext[]={
+    "int i;",
+    "",
+    "if(p)",
+    "{",
+    " if((i=*p++)==0)",
+    "   retrun p[c];",
+    " for(;--i>=0;p+=2)",
+    "   if(c==p[0])",
+    "     return p[1];",
+    "}",
+    "return YYF;",
+    "}",
+    NULL
+  };
+  fprintf(fp,"\n/*-------------------------------------------------------*/\n");
+  fprintf(fp,"%s %s yy_next(cur_state,c)\n",D_SCLASS,TYPE);
+  printv(fp,toptext);
+  fprintf(fp,"  %s  *p=%s[cur_state];\n",TYPE,name);
+  printv(fp,boptext);
+}
