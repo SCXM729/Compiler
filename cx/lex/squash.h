@@ -1,15 +1,12 @@
-#include <cctype>
-#include <cstdio>
-#ifdef MSDOS
-#include <cstdlib>
-#else
-#include <malloc.h>
-#endif
 #include "../tool/compiler.h"
 #include "../tool/debug.h"
 #include "../tool/set.h"
 #include "dfa.h"
 #include "globals.h"
+#include <cctype>
+#include <cstdio>
+#include <cstdlib>
+#include<cstring>
 
 /* squash.cpp: This module contains the routine to compress a table
  * horizontally and vertically by removing redundant columns and rows,
@@ -35,5 +32,5 @@ void cnext(FILE *, int *, int);
 void cnext(FILE *, char *);
 int squash(FILE *, ROW *, int, int, char *);
 
-#define ROW_EQUIV(r1,r2,ncols) (memcpy(r1,r2,ncols*sizeof(int))==0)
-#define ROW_CPY(r1,r2,ncols) (memcpy(r1,r2,ncols*sizeof(int)))
+#define ROW_EQUIV(r1, r2, ncols) (memcpy(r1, r2, ncols * sizeof(int)) == 0)
+#define ROW_CPY(r1, r2, ncols) (memcpy(r1, r2, ncols * sizeof(int)))
