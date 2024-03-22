@@ -1,0 +1,26 @@
+# ninja log v5
+1	57	1708400148198946285	CMakeFiles/compiler.dir/print_ar.cpp.o	745e8cd7bcffd6d5
+627	667	1708400148812277527	libcompiler.a	58bbf4e19870b421
+81	150	1708488013990106385	lex	62dad5887be87eac
+3	42	1708403778269902066	CMakeFiles/dfa.dir/signon.cpp.o	bbd97628ce212bea
+2	65	1708403778293235320	CMakeFiles/nfa.dir/nfa.cpp.o	8b1f9ba818a03bfb
+2	42	1708403778269902066	CMakeFiles/dfa.dir/input.cpp.o	f119948eed1b44ea
+42	81	1708488013923439946	libdfa.a	9c864e4ff151efae
+1	627	1708400148768944342	CMakeFiles/compiler.dir/home/sheep/Compiler/cx/tool/compiler.cpp.o	de77f2ce7f10a01
+2	42	1708488013883440082	CMakeFiles/dfa.dir/squash.cpp.o	cff796c977968db3
+91	138	1708400148282279335	libhash.a	2319eac58e23810c
+1	96	1708443018271485471	CMakeFiles/set.dir/home/sheep/Compiler/cx/tool/set.cpp.o	1ee5e3a835a3923b
+2	37	1708443168607639533	CMakeFiles/nfa.dir/terp.cpp.o	3a77ab354fd45773
+37	75	1708443168647639396	libnfa.a	8a176d8cffdda29c
+1	70	1708400148212279573	CMakeFiles/compiler.dir/pairs.cpp.o	b60ded528105a6a6
+1	36	1708403881786215770	CMakeFiles/dfa.dir/print.cpp.o	639e4aea8010aa3a
+3	194	1708403778419901555	CMakeFiles/lex.dir/lex.cpp.o	2e39674ae7ec7a3e
+1	91	1708400148235612827	CMakeFiles/hash.dir/home/sheep/Compiler/cx/tool/hash.cpp.o	11a588f7aa95a08a
+96	133	1708443018308152013	libset.a	234592c461b044b0
+2	42	1708403778269902066	CMakeFiles/nfa.dir/printnfa.cpp.o	859674a4bc1a93c6
+3	55	1708403778283235354	CMakeFiles/dfa.dir/minimize.cpp.o	1bd9ad134fb953e9
+1	231	1708403881982881766	CMakeFiles/lext.dir/lext.cpp.o	6fc9bfd9708d9ae9
+82	143	1708488013983439741	lext	39215613ba6b8324
+1	38	1708443585709550662	CMakeFiles/dfa.dir/dfa.cpp.o	4b93b11300606952
+2	171	1708493494304753340	CMakeFiles/lex.dir/lex.cpp.o	2e39674ae7ec7a3e
+171	227	1708493494361419814	lex	62dad5887be87eac

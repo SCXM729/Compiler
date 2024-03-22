@@ -1,0 +1,26 @@
+[
+{
+  "directory": "/home/sheep/Compiler/cx/tool/test/build",
+  "command": "/usr/bin/c++  -I/home/sheep/googletest/build/install/include -g -std=gnu++20 -DDEBUG -o CMakeFiles/set.dir/home/sheep/Compiler/cx/tool/set.cpp.o -c /home/sheep/Compiler/cx/tool/set.cpp",
+  "file": "/home/sheep/Compiler/cx/tool/set.cpp",
+  "output": "CMakeFiles/set.dir/home/sheep/Compiler/cx/tool/set.cpp.o"
+},
+{
+  "directory": "/home/sheep/Compiler/cx/tool/test/build",
+  "command": "/usr/bin/c++  -I/home/sheep/googletest/build/install/include -g -std=gnu++20 -DDEBUG -o CMakeFiles/compiler.dir/home/sheep/Compiler/cx/tool/compiler.cpp.o -c /home/sheep/Compiler/cx/tool/compiler.cpp",
+  "file": "/home/sheep/Compiler/cx/tool/compiler.cpp",
+  "output": "CMakeFiles/compiler.dir/home/sheep/Compiler/cx/tool/compiler.cpp.o"
+},
+{
+  "directory": "/home/sheep/Compiler/cx/tool/test/build",
+  "command": "/usr/bin/c++  -I/home/sheep/googletest/build/install/include -g -std=gnu++20 -DDEBUG -o CMakeFiles/hash.dir/home/sheep/Compiler/cx/tool/hash.cpp.o -c /home/sheep/Compiler/cx/tool/hash.cpp",
+  "file": "/home/sheep/Compiler/cx/tool/hash.cpp",
+  "output": "CMakeFiles/hash.dir/home/sheep/Compiler/cx/tool/hash.cpp.o"
+},
+{
+  "directory": "/home/sheep/Compiler/cx/tool/test/build",
+  "command": "/usr/bin/c++  -I/home/sheep/googletest/build/install/include -g -std=gnu++20 -DDEBUG -o CMakeFiles/setTest.dir/setTest.cpp.o -c /home/sheep/Compiler/cx/tool/test/setTest.cpp",
+  "file": "/home/sheep/Compiler/cx/tool/test/setTest.cpp",
+  "output": "CMakeFiles/setTest.dir/setTest.cpp.o"
+}
+]

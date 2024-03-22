@@ -1,0 +1,14 @@
+/home/sheep/Compiler/cx/build/CMakeFiles/edit_cache.dir
+/home/sheep/Compiler/cx/build/CMakeFiles/rebuild_cache.dir
+/home/sheep/Compiler/cx/build/lexcpp/CMakeFiles/lexio.dir
+/home/sheep/Compiler/cx/build/lexcpp/CMakeFiles/lex.dir
+/home/sheep/Compiler/cx/build/lexcpp/CMakeFiles/edit_cache.dir
+/home/sheep/Compiler/cx/build/lexcpp/CMakeFiles/rebuild_cache.dir
+/home/sheep/Compiler/cx/build/toolcpp/CMakeFiles/set.dir
+/home/sheep/Compiler/cx/build/toolcpp/CMakeFiles/compiler.dir
+/home/sheep/Compiler/cx/build/toolcpp/CMakeFiles/hash.dir
+/home/sheep/Compiler/cx/build/toolcpp/CMakeFiles/setTest.dir
+/home/sheep/Compiler/cx/build/toolcpp/CMakeFiles/setCompiler.dir
+/home/sheep/Compiler/cx/build/toolcpp/CMakeFiles/hashTest.dir
+/home/sheep/Compiler/cx/build/toolcpp/CMakeFiles/edit_cache.dir
+/home/sheep/Compiler/cx/build/toolcpp/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,98 @@
+[
+{
+  "directory": "/home/sheep/Compiler/cx/lex/build",
+  "command": "/usr/bin/clang++ -g -DDEBUG -o CMakeFiles/set.dir/home/sheep/Compiler/cx/tool/set.cpp.o -c /home/sheep/Compiler/cx/tool/set.cpp",
+  "file": "/home/sheep/Compiler/cx/tool/set.cpp",
+  "output": "CMakeFiles/set.dir/home/sheep/Compiler/cx/tool/set.cpp.o"
+},
+{
+  "directory": "/home/sheep/Compiler/cx/lex/build",
+  "command": "/usr/bin/clang++ -g -DDEBUG -o CMakeFiles/hash.dir/home/sheep/Compiler/cx/tool/hash.cpp.o -c /home/sheep/Compiler/cx/tool/hash.cpp",
+  "file": "/home/sheep/Compiler/cx/tool/hash.cpp",
+  "output": "CMakeFiles/hash.dir/home/sheep/Compiler/cx/tool/hash.cpp.o"
+},
+{
+  "directory": "/home/sheep/Compiler/cx/lex/build",
+  "command": "/usr/bin/clang++ -g -DDEBUG -o CMakeFiles/compiler.dir/home/sheep/Compiler/cx/tool/compiler.cpp.o -c /home/sheep/Compiler/cx/tool/compiler.cpp",
+  "file": "/home/sheep/Compiler/cx/tool/compiler.cpp",
+  "output": "CMakeFiles/compiler.dir/home/sheep/Compiler/cx/tool/compiler.cpp.o"
+},
+{
+  "directory": "/home/sheep/Compiler/cx/lex/build",
+  "command": "/usr/bin/clang++ -g -DDEBUG -o CMakeFiles/compiler.dir/pairs.cpp.o -c /home/sheep/Compiler/cx/lex/pairs.cpp",
+  "file": "/home/sheep/Compiler/cx/lex/pairs.cpp",
+  "output": "CMakeFiles/compiler.dir/pairs.cpp.o"
+},
+{
+  "directory": "/home/sheep/Compiler/cx/lex/build",
+  "command": "/usr/bin/clang++ -g -DDEBUG -o CMakeFiles/compiler.dir/print_ar.cpp.o -c /home/sheep/Compiler/cx/lex/print_ar.cpp",
+  "file": "/home/sheep/Compiler/cx/lex/print_ar.cpp",
+  "output": "CMakeFiles/compiler.dir/print_ar.cpp.o"
+},
+{
+  "directory": "/home/sheep/Compiler/cx/lex/build",
+  "command": "/usr/bin/clang++ -g -DDEBUG -o CMakeFiles/nfa.dir/nfa.cpp.o -c /home/sheep/Compiler/cx/lex/nfa.cpp",
+  "file": "/home/sheep/Compiler/cx/lex/nfa.cpp",
+  "output": "CMakeFiles/nfa.dir/nfa.cpp.o"
+},
+{
+  "directory": "/home/sheep/Compiler/cx/lex/build",
+  "command": "/usr/bin/clang++ -g -DDEBUG -o CMakeFiles/nfa.dir/printnfa.cpp.o -c /home/sheep/Compiler/cx/lex/printnfa.cpp",
+  "file": "/home/sheep/Compiler/cx/lex/printnfa.cpp",
+  "output": "CMakeFiles/nfa.dir/printnfa.cpp.o"
+},
+{
+  "directory": "/home/sheep/Compiler/cx/lex/build",
+  "command": "/usr/bin/clang++ -g -DDEBUG -o CMakeFiles/nfa.dir/terp.cpp.o -c /home/sheep/Compiler/cx/lex/terp.cpp",
+  "file": "/home/sheep/Compiler/cx/lex/terp.cpp",
+  "output": "CMakeFiles/nfa.dir/terp.cpp.o"
+},
+{
+  "directory": "/home/sheep/Compiler/cx/lex/build",
+  "command": "/usr/bin/clang++ -g -DDEBUG -o CMakeFiles/dfa.dir/dfa.cpp.o -c /home/sheep/Compiler/cx/lex/dfa.cpp",
+  "file": "/home/sheep/Compiler/cx/lex/dfa.cpp",
+  "output": "CMakeFiles/dfa.dir/dfa.cpp.o"
+},
+{
+  "directory": "/home/sheep/Compiler/cx/lex/build",
+  "command": "/usr/bin/clang++ -g -DDEBUG -o CMakeFiles/dfa.dir/input.cpp.o -c /home/sheep/Compiler/cx/lex/input.cpp",
+  "file": "/home/sheep/Compiler/cx/lex/input.cpp",
+  "output": "CMakeFiles/dfa.dir/input.cpp.o"
+},
+{
+  "directory": "/home/sheep/Compiler/cx/lex/build",
+  "command": "/usr/bin/clang++ -g -DDEBUG -o CMakeFiles/dfa.dir/minimize.cpp.o -c /home/sheep/Compiler/cx/lex/minimize.cpp",
+  "file": "/home/sheep/Compiler/cx/lex/minimize.cpp",
+  "output": "CMakeFiles/dfa.dir/minimize.cpp.o"
+},
+{
+  "directory": "/home/sheep/Compiler/cx/lex/build",
+  "command": "/usr/bin/clang++ -g -DDEBUG -o CMakeFiles/dfa.dir/print.cpp.o -c /home/sheep/Compiler/cx/lex/print.cpp",
+  "file": "/home/sheep/Compiler/cx/lex/print.cpp",
+  "output": "CMakeFiles/dfa.dir/print.cpp.o"
+},
+{
+  "directory": "/home/sheep/Compiler/cx/lex/build",
+  "command": "/usr/bin/clang++ -g -DDEBUG -o CMakeFiles/dfa.dir/signon.cpp.o -c /home/sheep/Compiler/cx/lex/signon.cpp",
+  "file": "/home/sheep/Compiler/cx/lex/signon.cpp",
+  "output": "CMakeFiles/dfa.dir/signon.cpp.o"
+},
+{
+  "directory": "/home/sheep/Compiler/cx/lex/build",
+  "command": "/usr/bin/clang++ -g -DDEBUG -o CMakeFiles/dfa.dir/squash.cpp.o -c /home/sheep/Compiler/cx/lex/squash.cpp",
+  "file": "/home/sheep/Compiler/cx/lex/squash.cpp",
+  "output": "CMakeFiles/dfa.dir/squash.cpp.o"
+},
+{
+  "directory": "/home/sheep/Compiler/cx/lex/build",
+  "command": "/usr/bin/clang++ -g -DDEBUG -o CMakeFiles/lex.dir/lex.cpp.o -c /home/sheep/Compiler/cx/lex/lex.cpp",
+  "file": "/home/sheep/Compiler/cx/lex/lex.cpp",
+  "output": "CMakeFiles/lex.dir/lex.cpp.o"
+},
+{
+  "directory": "/home/sheep/Compiler/cx/lex/build",
+  "command": "/usr/bin/clang++ -g -DDEBUG -o CMakeFiles/lext.dir/lext.cpp.o -c /home/sheep/Compiler/cx/lex/lext.cpp",
+  "file": "/home/sheep/Compiler/cx/lex/lext.cpp",
+  "output": "CMakeFiles/lext.dir/lext.cpp.o"
+}
+]

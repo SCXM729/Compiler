@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/setCompiler.dir/compilerTest.cpp.o -o setCompiler   -L/home/sheep/googletest/build/install/lib  -Wl,-rpath,/home/sheep/googletest/build/install/lib libcompiler.a -lgtest -lgtest -lgtest_main -lgmock -lgmock_main 

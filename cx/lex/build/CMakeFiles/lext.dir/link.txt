@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/lext.dir/lext.cpp.o -o lext  libdfa.a libnfa.a libcompiler.a libhash.a libset.a 

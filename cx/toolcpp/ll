@@ -1,0 +1,28 @@
+  if (numsyms == 0) {
+    throw "the table is empty, delete something is wrong";
+  }
+
+  auto p = table[hash(data) % size];
+
+  /* find the element in the table list */
+  while (p && (cmp(data, p->data) != 0)) {
+    p = p->next;
+  }
+
+  if (p == nullptr)
+    throw "could find the element in the table";
+
+  if (p) {
+    --numsyms;
+
+    /* the tail */
+    if (p->next == nullptr) {
+      *(p->prev) = nullptr;
+      delete p;
+    } else { /* the middle */
+      p->next->prev = p->prev;
+      delete p;
+    }
+  }
+}
+

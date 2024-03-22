@@ -1,0 +1,2 @@
+/usr/bin/ar qc libnfa.a CMakeFiles/nfa.dir/nfa.cpp.o CMakeFiles/nfa.dir/printnfa.cpp.o CMakeFiles/nfa.dir/terp.cpp.o
+/usr/bin/ranlib libnfa.a

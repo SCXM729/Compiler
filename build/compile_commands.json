@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/sheep/Compiler/build",
+  "command": "/usr/bin/clang++ -g -std=gnu++20 @CMakeFiles/test.dir/test.cpp.o.modmap -o CMakeFiles/test.dir/test.cpp.o -c /home/sheep/Compiler/test.cpp",
+  "file": "/home/sheep/Compiler/test.cpp",
+  "output": "CMakeFiles/test.dir/test.cpp.o"
+}
+]

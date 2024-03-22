@@ -1,0 +1,9 @@
+/home/sheep/Compiler/cx/lex/build/CMakeFiles/set.dir
+/home/sheep/Compiler/cx/lex/build/CMakeFiles/hash.dir
+/home/sheep/Compiler/cx/lex/build/CMakeFiles/compiler.dir
+/home/sheep/Compiler/cx/lex/build/CMakeFiles/nfa.dir
+/home/sheep/Compiler/cx/lex/build/CMakeFiles/dfa.dir
+/home/sheep/Compiler/cx/lex/build/CMakeFiles/lex.dir
+/home/sheep/Compiler/cx/lex/build/CMakeFiles/lext.dir
+/home/sheep/Compiler/cx/lex/build/CMakeFiles/edit_cache.dir
+/home/sheep/Compiler/cx/lex/build/CMakeFiles/rebuild_cache.dir

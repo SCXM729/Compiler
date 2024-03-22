@@ -1,0 +1,2 @@
+/usr/bin/ar qc libhash.a 
+/usr/bin/ranlib libhash.a

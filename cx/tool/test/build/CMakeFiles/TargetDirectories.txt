@@ -1,0 +1,6 @@
+/home/sheep/Compiler/cx/tool/test/build/CMakeFiles/set.dir
+/home/sheep/Compiler/cx/tool/test/build/CMakeFiles/compiler.dir
+/home/sheep/Compiler/cx/tool/test/build/CMakeFiles/hash.dir
+/home/sheep/Compiler/cx/tool/test/build/CMakeFiles/setTest.dir
+/home/sheep/Compiler/cx/tool/test/build/CMakeFiles/edit_cache.dir
+/home/sheep/Compiler/cx/tool/test/build/CMakeFiles/rebuild_cache.dir

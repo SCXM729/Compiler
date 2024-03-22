@@ -1,0 +1,2 @@
+/usr/bin/ar qc libset.a CMakeFiles/set.dir/home/sheep/Compiler/cx/tool/set.cpp.o
+/usr/bin/ranlib libset.a

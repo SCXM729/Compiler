@@ -1,0 +1,2 @@
+/usr/bin/ar qc libdfa.a CMakeFiles/dfa.dir/dfa.cpp.o CMakeFiles/dfa.dir/input.cpp.o CMakeFiles/dfa.dir/minimize.cpp.o CMakeFiles/dfa.dir/print.cpp.o CMakeFiles/dfa.dir/signon.cpp.o CMakeFiles/dfa.dir/squash.cpp.o
+/usr/bin/ranlib libdfa.a

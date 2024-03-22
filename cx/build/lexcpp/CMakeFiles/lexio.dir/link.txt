@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblexio.a CMakeFiles/lexio.dir/lexio.cpp.o CMakeFiles/lexio.dir/nfa.cpp.o CMakeFiles/lexio.dir/nfaThompson.cpp.o CMakeFiles/lexio.dir/printNfa.cpp.o CMakeFiles/lexio.dir/dfa.cpp.o CMakeFiles/lexio.dir/dfaTerp.cpp.o CMakeFiles/lexio.dir/minimize.cpp.o
+/usr/bin/ranlib liblexio.a

@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/sheep/Compiler/cx/test/build",
+  "command": "/usr/bin/c++  -I/home/sheep/googletest/build/install/include -I/home/sheep/Compiler/cx/test/../toolcpp -g -std=gnu++23 -DDEBUG -o CMakeFiles/main.dir/main.cpp.o -c /home/sheep/Compiler/cx/test/main.cpp",
+  "file": "/home/sheep/Compiler/cx/test/main.cpp",
+  "output": "CMakeFiles/main.dir/main.cpp.o"
+}
+]

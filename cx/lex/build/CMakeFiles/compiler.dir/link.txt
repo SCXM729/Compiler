@@ -1,0 +1,2 @@
+/usr/bin/ar qc libcompiler.a CMakeFiles/compiler.dir/home/sheep/Compiler/cx/tool/compiler.cpp.o CMakeFiles/compiler.dir/pairs.cpp.o CMakeFiles/compiler.dir/print_ar.cpp.o
+/usr/bin/ranlib libcompiler.a
