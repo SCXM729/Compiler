@@ -1,122 +1,140 @@
 [
 {
   "directory": "/home/sheep/Compiler/cx/build",
-  "command": "/usr/bin/c++ -I/home/sheep/googletest/build/install/include -I/home/sheep/Compiler/cx/lexcpp/../toolcpp -g -std=gnu++23 -o lexcpp/CMakeFiles/lexio.dir/lexio.cpp.o -c /home/sheep/Compiler/cx/lexcpp/lexio.cpp",
+  "command": "/usr/bin/c++ -I/home/sheep/Compiler/cx/lexcpp/../toolcpp -g -std=gnu++23 -o lexcpp/CMakeFiles/lexio.dir/lexio.cpp.o -c /home/sheep/Compiler/cx/lexcpp/lexio.cpp",
   "file": "/home/sheep/Compiler/cx/lexcpp/lexio.cpp",
   "output": "lexcpp/CMakeFiles/lexio.dir/lexio.cpp.o"
 },
 {
   "directory": "/home/sheep/Compiler/cx/build",
-  "command": "/usr/bin/c++ -I/home/sheep/googletest/build/install/include -I/home/sheep/Compiler/cx/lexcpp/../toolcpp -g -std=gnu++23 -o lexcpp/CMakeFiles/lexio.dir/nfa.cpp.o -c /home/sheep/Compiler/cx/lexcpp/nfa.cpp",
+  "command": "/usr/bin/c++ -I/home/sheep/Compiler/cx/lexcpp/../toolcpp -g -std=gnu++23 -o lexcpp/CMakeFiles/lexio.dir/nfa.cpp.o -c /home/sheep/Compiler/cx/lexcpp/nfa.cpp",
   "file": "/home/sheep/Compiler/cx/lexcpp/nfa.cpp",
   "output": "lexcpp/CMakeFiles/lexio.dir/nfa.cpp.o"
 },
 {
   "directory": "/home/sheep/Compiler/cx/build",
-  "command": "/usr/bin/c++ -I/home/sheep/googletest/build/install/include -I/home/sheep/Compiler/cx/lexcpp/../toolcpp -g -std=gnu++23 -o lexcpp/CMakeFiles/lexio.dir/nfaThompson.cpp.o -c /home/sheep/Compiler/cx/lexcpp/nfaThompson.cpp",
+  "command": "/usr/bin/c++ -I/home/sheep/Compiler/cx/lexcpp/../toolcpp -g -std=gnu++23 -o lexcpp/CMakeFiles/lexio.dir/nfaThompson.cpp.o -c /home/sheep/Compiler/cx/lexcpp/nfaThompson.cpp",
   "file": "/home/sheep/Compiler/cx/lexcpp/nfaThompson.cpp",
   "output": "lexcpp/CMakeFiles/lexio.dir/nfaThompson.cpp.o"
 },
 {
   "directory": "/home/sheep/Compiler/cx/build",
-  "command": "/usr/bin/c++ -I/home/sheep/googletest/build/install/include -I/home/sheep/Compiler/cx/lexcpp/../toolcpp -g -std=gnu++23 -o lexcpp/CMakeFiles/lexio.dir/printNfa.cpp.o -c /home/sheep/Compiler/cx/lexcpp/printNfa.cpp",
+  "command": "/usr/bin/c++ -I/home/sheep/Compiler/cx/lexcpp/../toolcpp -g -std=gnu++23 -o lexcpp/CMakeFiles/lexio.dir/printNfa.cpp.o -c /home/sheep/Compiler/cx/lexcpp/printNfa.cpp",
   "file": "/home/sheep/Compiler/cx/lexcpp/printNfa.cpp",
   "output": "lexcpp/CMakeFiles/lexio.dir/printNfa.cpp.o"
 },
 {
   "directory": "/home/sheep/Compiler/cx/build",
-  "command": "/usr/bin/c++ -I/home/sheep/googletest/build/install/include -I/home/sheep/Compiler/cx/lexcpp/../toolcpp -g -std=gnu++23 -o lexcpp/CMakeFiles/lexio.dir/dfa.cpp.o -c /home/sheep/Compiler/cx/lexcpp/dfa.cpp",
+  "command": "/usr/bin/c++ -I/home/sheep/Compiler/cx/lexcpp/../toolcpp -g -std=gnu++23 -o lexcpp/CMakeFiles/lexio.dir/dfa.cpp.o -c /home/sheep/Compiler/cx/lexcpp/dfa.cpp",
   "file": "/home/sheep/Compiler/cx/lexcpp/dfa.cpp",
   "output": "lexcpp/CMakeFiles/lexio.dir/dfa.cpp.o"
 },
 {
   "directory": "/home/sheep/Compiler/cx/build",
-  "command": "/usr/bin/c++ -I/home/sheep/googletest/build/install/include -I/home/sheep/Compiler/cx/lexcpp/../toolcpp -g -std=gnu++23 -o lexcpp/CMakeFiles/lexio.dir/dfaTerp.cpp.o -c /home/sheep/Compiler/cx/lexcpp/dfaTerp.cpp",
+  "command": "/usr/bin/c++ -I/home/sheep/Compiler/cx/lexcpp/../toolcpp -g -std=gnu++23 -o lexcpp/CMakeFiles/lexio.dir/dfaTerp.cpp.o -c /home/sheep/Compiler/cx/lexcpp/dfaTerp.cpp",
   "file": "/home/sheep/Compiler/cx/lexcpp/dfaTerp.cpp",
   "output": "lexcpp/CMakeFiles/lexio.dir/dfaTerp.cpp.o"
 },
 {
   "directory": "/home/sheep/Compiler/cx/build",
-  "command": "/usr/bin/c++ -I/home/sheep/googletest/build/install/include -I/home/sheep/Compiler/cx/lexcpp/../toolcpp -g -std=gnu++23 -o lexcpp/CMakeFiles/lexio.dir/minimize.cpp.o -c /home/sheep/Compiler/cx/lexcpp/minimize.cpp",
+  "command": "/usr/bin/c++ -I/home/sheep/Compiler/cx/lexcpp/../toolcpp -g -std=gnu++23 -o lexcpp/CMakeFiles/lexio.dir/minimize.cpp.o -c /home/sheep/Compiler/cx/lexcpp/minimize.cpp",
   "file": "/home/sheep/Compiler/cx/lexcpp/minimize.cpp",
   "output": "lexcpp/CMakeFiles/lexio.dir/minimize.cpp.o"
 },
 {
   "directory": "/home/sheep/Compiler/cx/build",
-  "command": "/usr/bin/c++ -I/home/sheep/googletest/build/install/include -I/home/sheep/Compiler/cx/lexcpp/../toolcpp -g -std=gnu++23 -o lexcpp/CMakeFiles/lex.dir/lex.cpp.o -c /home/sheep/Compiler/cx/lexcpp/lex.cpp",
+  "command": "/usr/bin/c++ -I/home/sheep/Compiler/cx/lexcpp/../toolcpp -g -std=gnu++23 -o lexcpp/CMakeFiles/lex.dir/lex.cpp.o -c /home/sheep/Compiler/cx/lexcpp/lex.cpp",
   "file": "/home/sheep/Compiler/cx/lexcpp/lex.cpp",
   "output": "lexcpp/CMakeFiles/lex.dir/lex.cpp.o"
 },
 {
   "directory": "/home/sheep/Compiler/cx/build",
-  "command": "/usr/bin/c++ -I/home/sheep/googletest/build/install/include -I/home/sheep/Compiler/cx/lexcpp/../toolcpp -g -std=gnu++23 -o lexcpp/CMakeFiles/lex.dir/lexio.cpp.o -c /home/sheep/Compiler/cx/lexcpp/lexio.cpp",
+  "command": "/usr/bin/c++ -I/home/sheep/Compiler/cx/lexcpp/../toolcpp -g -std=gnu++23 -o lexcpp/CMakeFiles/lex.dir/lexio.cpp.o -c /home/sheep/Compiler/cx/lexcpp/lexio.cpp",
   "file": "/home/sheep/Compiler/cx/lexcpp/lexio.cpp",
   "output": "lexcpp/CMakeFiles/lex.dir/lexio.cpp.o"
 },
 {
   "directory": "/home/sheep/Compiler/cx/build",
-  "command": "/usr/bin/c++ -I/home/sheep/googletest/build/install/include -I/home/sheep/Compiler/cx/lexcpp/../toolcpp -g -std=gnu++23 -o lexcpp/CMakeFiles/lex.dir/nfa.cpp.o -c /home/sheep/Compiler/cx/lexcpp/nfa.cpp",
+  "command": "/usr/bin/c++ -I/home/sheep/Compiler/cx/lexcpp/../toolcpp -g -std=gnu++23 -o lexcpp/CMakeFiles/lex.dir/nfa.cpp.o -c /home/sheep/Compiler/cx/lexcpp/nfa.cpp",
   "file": "/home/sheep/Compiler/cx/lexcpp/nfa.cpp",
   "output": "lexcpp/CMakeFiles/lex.dir/nfa.cpp.o"
 },
 {
   "directory": "/home/sheep/Compiler/cx/build",
-  "command": "/usr/bin/c++ -I/home/sheep/googletest/build/install/include -I/home/sheep/Compiler/cx/lexcpp/../toolcpp -g -std=gnu++23 -o lexcpp/CMakeFiles/lex.dir/nfaThompson.cpp.o -c /home/sheep/Compiler/cx/lexcpp/nfaThompson.cpp",
+  "command": "/usr/bin/c++ -I/home/sheep/Compiler/cx/lexcpp/../toolcpp -g -std=gnu++23 -o lexcpp/CMakeFiles/lex.dir/nfaThompson.cpp.o -c /home/sheep/Compiler/cx/lexcpp/nfaThompson.cpp",
   "file": "/home/sheep/Compiler/cx/lexcpp/nfaThompson.cpp",
   "output": "lexcpp/CMakeFiles/lex.dir/nfaThompson.cpp.o"
 },
 {
   "directory": "/home/sheep/Compiler/cx/build",
-  "command": "/usr/bin/c++ -I/home/sheep/googletest/build/install/include -I/home/sheep/Compiler/cx/lexcpp/../toolcpp -g -std=gnu++23 -o lexcpp/CMakeFiles/lex.dir/printNfa.cpp.o -c /home/sheep/Compiler/cx/lexcpp/printNfa.cpp",
+  "command": "/usr/bin/c++ -I/home/sheep/Compiler/cx/lexcpp/../toolcpp -g -std=gnu++23 -o lexcpp/CMakeFiles/lex.dir/printNfa.cpp.o -c /home/sheep/Compiler/cx/lexcpp/printNfa.cpp",
   "file": "/home/sheep/Compiler/cx/lexcpp/printNfa.cpp",
   "output": "lexcpp/CMakeFiles/lex.dir/printNfa.cpp.o"
 },
 {
   "directory": "/home/sheep/Compiler/cx/build",
-  "command": "/usr/bin/c++ -I/home/sheep/googletest/build/install/include -I/home/sheep/Compiler/cx/lexcpp/../toolcpp -g -std=gnu++23 -o lexcpp/CMakeFiles/lex.dir/dfa.cpp.o -c /home/sheep/Compiler/cx/lexcpp/dfa.cpp",
+  "command": "/usr/bin/c++ -I/home/sheep/Compiler/cx/lexcpp/../toolcpp -g -std=gnu++23 -o lexcpp/CMakeFiles/lex.dir/dfa.cpp.o -c /home/sheep/Compiler/cx/lexcpp/dfa.cpp",
   "file": "/home/sheep/Compiler/cx/lexcpp/dfa.cpp",
   "output": "lexcpp/CMakeFiles/lex.dir/dfa.cpp.o"
 },
 {
   "directory": "/home/sheep/Compiler/cx/build",
-  "command": "/usr/bin/c++ -I/home/sheep/googletest/build/install/include -I/home/sheep/Compiler/cx/lexcpp/../toolcpp -g -std=gnu++23 -o lexcpp/CMakeFiles/lex.dir/dfaTerp.cpp.o -c /home/sheep/Compiler/cx/lexcpp/dfaTerp.cpp",
+  "command": "/usr/bin/c++ -I/home/sheep/Compiler/cx/lexcpp/../toolcpp -g -std=gnu++23 -o lexcpp/CMakeFiles/lex.dir/dfaTerp.cpp.o -c /home/sheep/Compiler/cx/lexcpp/dfaTerp.cpp",
   "file": "/home/sheep/Compiler/cx/lexcpp/dfaTerp.cpp",
   "output": "lexcpp/CMakeFiles/lex.dir/dfaTerp.cpp.o"
 },
 {
   "directory": "/home/sheep/Compiler/cx/build",
-  "command": "/usr/bin/c++ -I/home/sheep/googletest/build/install/include -I/home/sheep/Compiler/cx/lexcpp/../toolcpp -g -std=gnu++23 -o lexcpp/CMakeFiles/lex.dir/minimize.cpp.o -c /home/sheep/Compiler/cx/lexcpp/minimize.cpp",
+  "command": "/usr/bin/c++ -I/home/sheep/Compiler/cx/lexcpp/../toolcpp -g -std=gnu++23 -o lexcpp/CMakeFiles/lex.dir/minimize.cpp.o -c /home/sheep/Compiler/cx/lexcpp/minimize.cpp",
   "file": "/home/sheep/Compiler/cx/lexcpp/minimize.cpp",
   "output": "lexcpp/CMakeFiles/lex.dir/minimize.cpp.o"
 },
 {
   "directory": "/home/sheep/Compiler/cx/build",
-  "command": "/usr/bin/c++ -I/home/sheep/googletest/build/install/include -g -std=gnu++23 -DDEBUG -Wall -Werror -o toolcpp/CMakeFiles/set.dir/set.cpp.o -c /home/sheep/Compiler/cx/toolcpp/set.cpp",
+  "command": "/usr/bin/c++ -g -std=gnu++23 -DDEBUG -Wall -Werror -o toolcpp/CMakeFiles/set.dir/set.cpp.o -c /home/sheep/Compiler/cx/toolcpp/set.cpp",
   "file": "/home/sheep/Compiler/cx/toolcpp/set.cpp",
   "output": "toolcpp/CMakeFiles/set.dir/set.cpp.o"
 },
 {
   "directory": "/home/sheep/Compiler/cx/build",
-  "command": "/usr/bin/c++ -I/home/sheep/googletest/build/install/include -g -std=gnu++23 -DDEBUG -Wall -Werror -o toolcpp/CMakeFiles/compiler.dir/compiler.cpp.o -c /home/sheep/Compiler/cx/toolcpp/compiler.cpp",
+  "command": "/usr/bin/c++ -g -std=gnu++23 -DDEBUG -Wall -Werror -o toolcpp/CMakeFiles/compiler.dir/compiler.cpp.o -c /home/sheep/Compiler/cx/toolcpp/compiler.cpp",
   "file": "/home/sheep/Compiler/cx/toolcpp/compiler.cpp",
   "output": "toolcpp/CMakeFiles/compiler.dir/compiler.cpp.o"
 },
 {
   "directory": "/home/sheep/Compiler/cx/build",
-  "command": "/usr/bin/c++ -I/home/sheep/googletest/build/install/include -g -std=gnu++23 -DDEBUG -Wall -Werror -o toolcpp/CMakeFiles/setTest.dir/setTest.cpp.o -c /home/sheep/Compiler/cx/toolcpp/setTest.cpp",
+  "command": "/usr/bin/c++ -isystem /home/sheep/Compiler/cx/build/_deps/googletest-src/googletest/include -isystem /home/sheep/Compiler/cx/build/_deps/googletest-src/googletest -isystem /home/sheep/Compiler/cx/build/_deps/googletest-src/googlemock/include -isystem /home/sheep/Compiler/cx/build/_deps/googletest-src/googlemock -g -std=gnu++23 -DDEBUG -Wall -Werror -o toolcpp/CMakeFiles/setTest.dir/setTest.cpp.o -c /home/sheep/Compiler/cx/toolcpp/setTest.cpp",
   "file": "/home/sheep/Compiler/cx/toolcpp/setTest.cpp",
   "output": "toolcpp/CMakeFiles/setTest.dir/setTest.cpp.o"
 },
 {
   "directory": "/home/sheep/Compiler/cx/build",
-  "command": "/usr/bin/c++ -I/home/sheep/googletest/build/install/include -g -std=gnu++23 -DDEBUG -Wall -Werror -o toolcpp/CMakeFiles/setCompiler.dir/compilerTest.cpp.o -c /home/sheep/Compiler/cx/toolcpp/compilerTest.cpp",
-  "file": "/home/sheep/Compiler/cx/toolcpp/compilerTest.cpp",
-  "output": "toolcpp/CMakeFiles/setCompiler.dir/compilerTest.cpp.o"
+  "command": "/usr/bin/c++ -isystem /home/sheep/Compiler/cx/build/_deps/googletest-src/googletest/include -isystem /home/sheep/Compiler/cx/build/_deps/googletest-src/googletest -isystem /home/sheep/Compiler/cx/build/_deps/googletest-src/googlemock/include -isystem /home/sheep/Compiler/cx/build/_deps/googletest-src/googlemock -g -std=gnu++23 -DDEBUG -Wall -Werror -o toolcpp/CMakeFiles/hashTest.dir/hashTest.cpp.o -c /home/sheep/Compiler/cx/toolcpp/hashTest.cpp",
+  "file": "/home/sheep/Compiler/cx/toolcpp/hashTest.cpp",
+  "output": "toolcpp/CMakeFiles/hashTest.dir/hashTest.cpp.o"
 },
 {
   "directory": "/home/sheep/Compiler/cx/build",
-  "command": "/usr/bin/c++ -I/home/sheep/googletest/build/install/include -g -std=gnu++23 -DDEBUG -Wall -Werror -o toolcpp/CMakeFiles/hashTest.dir/hashTest.cpp.o -c /home/sheep/Compiler/cx/toolcpp/hashTest.cpp",
-  "file": "/home/sheep/Compiler/cx/toolcpp/hashTest.cpp",
-  "output": "toolcpp/CMakeFiles/hashTest.dir/hashTest.cpp.o"
+  "command": "/usr/bin/c++ -I/home/sheep/Compiler/cx/build/_deps/googletest-src/googlemock/include -I/home/sheep/Compiler/cx/build/_deps/googletest-src/googlemock -isystem /home/sheep/Compiler/cx/build/_deps/googletest-src/googletest/include -isystem /home/sheep/Compiler/cx/build/_deps/googletest-src/googletest -g -std=c++23 -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -DDEBUG -Wall -Werror -o _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /home/sheep/Compiler/cx/build/_deps/googletest-src/googlemock/src/gmock-all.cc",
+  "file": "/home/sheep/Compiler/cx/build/_deps/googletest-src/googlemock/src/gmock-all.cc",
+  "output": "_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o"
+},
+{
+  "directory": "/home/sheep/Compiler/cx/build",
+  "command": "/usr/bin/c++ -isystem /home/sheep/Compiler/cx/build/_deps/googletest-src/googlemock/include -isystem /home/sheep/Compiler/cx/build/_deps/googletest-src/googlemock -isystem /home/sheep/Compiler/cx/build/_deps/googletest-src/googletest/include -isystem /home/sheep/Compiler/cx/build/_deps/googletest-src/googletest -g -std=c++23 -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -DDEBUG -Wall -Werror -o _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c /home/sheep/Compiler/cx/build/_deps/googletest-src/googlemock/src/gmock_main.cc",
+  "file": "/home/sheep/Compiler/cx/build/_deps/googletest-src/googlemock/src/gmock_main.cc",
+  "output": "_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o"
+},
+{
+  "directory": "/home/sheep/Compiler/cx/build",
+  "command": "/usr/bin/c++ -I/home/sheep/Compiler/cx/build/_deps/googletest-src/googletest/include -I/home/sheep/Compiler/cx/build/_deps/googletest-src/googletest -g -std=c++23 -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -DDEBUG -Wall -Werror -o _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /home/sheep/Compiler/cx/build/_deps/googletest-src/googletest/src/gtest-all.cc",
+  "file": "/home/sheep/Compiler/cx/build/_deps/googletest-src/googletest/src/gtest-all.cc",
+  "output": "_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o"
+},
+{
+  "directory": "/home/sheep/Compiler/cx/build",
+  "command": "/usr/bin/c++ -isystem /home/sheep/Compiler/cx/build/_deps/googletest-src/googletest/include -isystem /home/sheep/Compiler/cx/build/_deps/googletest-src/googletest -g -std=c++23 -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -DDEBUG -Wall -Werror -o _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /home/sheep/Compiler/cx/build/_deps/googletest-src/googletest/src/gtest_main.cc",
+  "file": "/home/sheep/Compiler/cx/build/_deps/googletest-src/googletest/src/gtest_main.cc",
+  "output": "_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o"
 }
 ]

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="Linux-c++"
+	BuildStamp="20240322-1306-Experimental"
+	Name="sheep"
+	Generator="ctest-3.28.3"
+	CompilerName="/usr/bin/c++"
+	CompilerVersion="13.2.1"
+	OSName="Linux"
+	Hostname="sheep"
+	OSRelease="6.7.9-arch1-1"
+	OSVersion="#1 SMP PREEMPT_DYNAMIC Fri, 08 Mar 2024 01:59:01 +0000"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="AuthenticAMD"
+	VendorID="Advanced Micro Devices"
+	FamilyID="25"
+	ModelID="80"
+	ProcessorCacheSize="512"
+	NumberOfLogicalCPU="16"
+	NumberOfPhysicalCPU="8"
+	TotalVirtualMemory="8191"
+	TotalPhysicalMemory="27918"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="3720.34"
+	>
+	<DynamicAnalysis Checker="Valgrind">
+		<StartDateTime>Mar 23 00:08 CST</StartDateTime>
+		<StartTestTime>1711123730</StartTestTime>
+		<TestList>
+			<Test>./lexcpp/lexMem</Test>
+		</TestList>
+		<DefectList/>
+		<EndDateTime>Mar 23 00:08 CST</EndDateTime>
+		<EndTestTime>1711123731</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</DynamicAnalysis>
+</Site>

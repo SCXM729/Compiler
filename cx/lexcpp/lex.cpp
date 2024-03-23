@@ -1,7 +1,6 @@
 #include "dfa.h"
 #include "lexio.h"
 #include "nfa.h"
-#include "gtest/gtest.h"
 #include <iostream>
 // TEST(lex, lexcpp) {
 int main() {

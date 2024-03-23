@@ -55,4 +55,7 @@ TEST(set, defaultconstructor) {
     std::cout << "equal" << std::endl;
 
   EXPECT_EQ(mysetc2 == mysetc2, true);
+  mysetc2.psets();
+  std::cout << mysetc2.getNbits() << std::endl;
+  EXPECT_EQ(mysetc2.is_empty(), false);
 }

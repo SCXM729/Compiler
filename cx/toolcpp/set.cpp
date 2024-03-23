@@ -62,6 +62,7 @@ Set &Set::operator=(Set &&rhs) noexcept {
   moveFrom(rhs);
   return *this;
 }
+
 void Set::enlarge(size_t needBytes) {
   if (nbytes > needBytes)
     return;
@@ -133,9 +134,10 @@ void Set::add(size_t position) {
       std::byte{0b10000000} >>
       position % 8; // a byte only have 1 bit that offset from array boundary
                     //
-  if (position < capacity)
+  if (position < capacity) {
     map[index] |= offset;
-  else {
+    nbits++;
+  } else {
     /* increment 16 bytes (128 bits) everytime when the position > nbits */
     size_t needBytes = 16 * (position / 128 + 1);
     // std::cout << "the needBytes is " << needBytes << std::endl;
@@ -156,6 +158,7 @@ void Set::add(size_t position) {
   }
 }
 
+bool Set::is_empty() const { return nbits ? false : true; }
 /* determine whether it is in the set or not */
 bool Set::isMember(size_t position) const {
   /* if position greater than capacity, just return false */

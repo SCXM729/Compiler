@@ -75,7 +75,8 @@ private:
 
   /* Groups of equivalent states in DfaDtran (collections of partitions */
   Set *Groups[Dfa_max]{};
-  /* the Inverse of Groups */
+  /* the Inverse of Groups. indexed by state number and evaluates to the group
+   * in which the state is found */
   int Ingroup[Dfa_max]{};
   /* Number of groups in Groups */
   size_t NumGroups;

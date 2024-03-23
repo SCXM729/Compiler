@@ -37,6 +37,18 @@ include CMakeFiles/rules.ninja
 cmake_ninja_workdir = /home/sheep/Compiler/cx/build/
 
 #############################################
+# Utility command for test
+
+build CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = cd /home/sheep/Compiler/cx/build && /usr/bin/ctest --force-new-ctest-process
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build test: phony CMakeFiles/test.util
+
+
+#############################################
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
@@ -59,6 +71,48 @@ build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
 
 build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
+
+#############################################
+# Utility command for list_install_components
+
+build list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build CMakeFiles/install.util: CUSTOM_COMMAND all
+  COMMAND = cd /home/sheep/Compiler/cx/build && /usr/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build install: phony CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build CMakeFiles/install/local.util: CUSTOM_COMMAND all
+  COMMAND = cd /home/sheep/Compiler/cx/build && /usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build install/local: phony CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build CMakeFiles/install/strip.util: CUSTOM_COMMAND all
+  COMMAND = cd /home/sheep/Compiler/cx/build && /usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build install/strip: phony CMakeFiles/install/strip.util
+
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
 # /home/sheep/Compiler/cx/CMakeLists.txt
@@ -73,64 +127,64 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 build cmake_object_order_depends_target_lexio: phony || cmake_object_order_depends_target_compiler cmake_object_order_depends_target_hash cmake_object_order_depends_target_set
 
-build lexcpp/CMakeFiles/lexio.dir/lexio.cpp.o: CXX_COMPILER__lexio_unscanned_DEBUG /home/sheep/Compiler/cx/lexcpp/lexio.cpp || cmake_object_order_depends_target_lexio
+build lexcpp/CMakeFiles/lexio.dir/lexio.cpp.o: CXX_COMPILER__lexio_unscanned_Debug /home/sheep/Compiler/cx/lexcpp/lexio.cpp || cmake_object_order_depends_target_lexio
   DEP_FILE = lexcpp/CMakeFiles/lexio.dir/lexio.cpp.o.d
   FLAGS = -g -std=gnu++23
-  INCLUDES = -I/home/sheep/googletest/build/install/include -I/home/sheep/Compiler/cx/lexcpp/../toolcpp
+  INCLUDES = -I/home/sheep/Compiler/cx/lexcpp/../toolcpp
   OBJECT_DIR = lexcpp/CMakeFiles/lexio.dir
   OBJECT_FILE_DIR = lexcpp/CMakeFiles/lexio.dir
   TARGET_COMPILE_PDB = lexcpp/CMakeFiles/lexio.dir/lexio.pdb
   TARGET_PDB = lexcpp/liblexio.pdb
 
-build lexcpp/CMakeFiles/lexio.dir/nfa.cpp.o: CXX_COMPILER__lexio_unscanned_DEBUG /home/sheep/Compiler/cx/lexcpp/nfa.cpp || cmake_object_order_depends_target_lexio
+build lexcpp/CMakeFiles/lexio.dir/nfa.cpp.o: CXX_COMPILER__lexio_unscanned_Debug /home/sheep/Compiler/cx/lexcpp/nfa.cpp || cmake_object_order_depends_target_lexio
   DEP_FILE = lexcpp/CMakeFiles/lexio.dir/nfa.cpp.o.d
   FLAGS = -g -std=gnu++23
-  INCLUDES = -I/home/sheep/googletest/build/install/include -I/home/sheep/Compiler/cx/lexcpp/../toolcpp
+  INCLUDES = -I/home/sheep/Compiler/cx/lexcpp/../toolcpp
   OBJECT_DIR = lexcpp/CMakeFiles/lexio.dir
   OBJECT_FILE_DIR = lexcpp/CMakeFiles/lexio.dir
   TARGET_COMPILE_PDB = lexcpp/CMakeFiles/lexio.dir/lexio.pdb
   TARGET_PDB = lexcpp/liblexio.pdb
 
-build lexcpp/CMakeFiles/lexio.dir/nfaThompson.cpp.o: CXX_COMPILER__lexio_unscanned_DEBUG /home/sheep/Compiler/cx/lexcpp/nfaThompson.cpp || cmake_object_order_depends_target_lexio
+build lexcpp/CMakeFiles/lexio.dir/nfaThompson.cpp.o: CXX_COMPILER__lexio_unscanned_Debug /home/sheep/Compiler/cx/lexcpp/nfaThompson.cpp || cmake_object_order_depends_target_lexio
   DEP_FILE = lexcpp/CMakeFiles/lexio.dir/nfaThompson.cpp.o.d
   FLAGS = -g -std=gnu++23
-  INCLUDES = -I/home/sheep/googletest/build/install/include -I/home/sheep/Compiler/cx/lexcpp/../toolcpp
+  INCLUDES = -I/home/sheep/Compiler/cx/lexcpp/../toolcpp
   OBJECT_DIR = lexcpp/CMakeFiles/lexio.dir
   OBJECT_FILE_DIR = lexcpp/CMakeFiles/lexio.dir
   TARGET_COMPILE_PDB = lexcpp/CMakeFiles/lexio.dir/lexio.pdb
   TARGET_PDB = lexcpp/liblexio.pdb
 
-build lexcpp/CMakeFiles/lexio.dir/printNfa.cpp.o: CXX_COMPILER__lexio_unscanned_DEBUG /home/sheep/Compiler/cx/lexcpp/printNfa.cpp || cmake_object_order_depends_target_lexio
+build lexcpp/CMakeFiles/lexio.dir/printNfa.cpp.o: CXX_COMPILER__lexio_unscanned_Debug /home/sheep/Compiler/cx/lexcpp/printNfa.cpp || cmake_object_order_depends_target_lexio
   DEP_FILE = lexcpp/CMakeFiles/lexio.dir/printNfa.cpp.o.d
   FLAGS = -g -std=gnu++23
-  INCLUDES = -I/home/sheep/googletest/build/install/include -I/home/sheep/Compiler/cx/lexcpp/../toolcpp
+  INCLUDES = -I/home/sheep/Compiler/cx/lexcpp/../toolcpp
   OBJECT_DIR = lexcpp/CMakeFiles/lexio.dir
   OBJECT_FILE_DIR = lexcpp/CMakeFiles/lexio.dir
   TARGET_COMPILE_PDB = lexcpp/CMakeFiles/lexio.dir/lexio.pdb
   TARGET_PDB = lexcpp/liblexio.pdb
 
-build lexcpp/CMakeFiles/lexio.dir/dfa.cpp.o: CXX_COMPILER__lexio_unscanned_DEBUG /home/sheep/Compiler/cx/lexcpp/dfa.cpp || cmake_object_order_depends_target_lexio
+build lexcpp/CMakeFiles/lexio.dir/dfa.cpp.o: CXX_COMPILER__lexio_unscanned_Debug /home/sheep/Compiler/cx/lexcpp/dfa.cpp || cmake_object_order_depends_target_lexio
   DEP_FILE = lexcpp/CMakeFiles/lexio.dir/dfa.cpp.o.d
   FLAGS = -g -std=gnu++23
-  INCLUDES = -I/home/sheep/googletest/build/install/include -I/home/sheep/Compiler/cx/lexcpp/../toolcpp
+  INCLUDES = -I/home/sheep/Compiler/cx/lexcpp/../toolcpp
   OBJECT_DIR = lexcpp/CMakeFiles/lexio.dir
   OBJECT_FILE_DIR = lexcpp/CMakeFiles/lexio.dir
   TARGET_COMPILE_PDB = lexcpp/CMakeFiles/lexio.dir/lexio.pdb
   TARGET_PDB = lexcpp/liblexio.pdb
 
-build lexcpp/CMakeFiles/lexio.dir/dfaTerp.cpp.o: CXX_COMPILER__lexio_unscanned_DEBUG /home/sheep/Compiler/cx/lexcpp/dfaTerp.cpp || cmake_object_order_depends_target_lexio
+build lexcpp/CMakeFiles/lexio.dir/dfaTerp.cpp.o: CXX_COMPILER__lexio_unscanned_Debug /home/sheep/Compiler/cx/lexcpp/dfaTerp.cpp || cmake_object_order_depends_target_lexio
   DEP_FILE = lexcpp/CMakeFiles/lexio.dir/dfaTerp.cpp.o.d
   FLAGS = -g -std=gnu++23
-  INCLUDES = -I/home/sheep/googletest/build/install/include -I/home/sheep/Compiler/cx/lexcpp/../toolcpp
+  INCLUDES = -I/home/sheep/Compiler/cx/lexcpp/../toolcpp
   OBJECT_DIR = lexcpp/CMakeFiles/lexio.dir
   OBJECT_FILE_DIR = lexcpp/CMakeFiles/lexio.dir
   TARGET_COMPILE_PDB = lexcpp/CMakeFiles/lexio.dir/lexio.pdb
   TARGET_PDB = lexcpp/liblexio.pdb
 
-build lexcpp/CMakeFiles/lexio.dir/minimize.cpp.o: CXX_COMPILER__lexio_unscanned_DEBUG /home/sheep/Compiler/cx/lexcpp/minimize.cpp || cmake_object_order_depends_target_lexio
+build lexcpp/CMakeFiles/lexio.dir/minimize.cpp.o: CXX_COMPILER__lexio_unscanned_Debug /home/sheep/Compiler/cx/lexcpp/minimize.cpp || cmake_object_order_depends_target_lexio
   DEP_FILE = lexcpp/CMakeFiles/lexio.dir/minimize.cpp.o.d
   FLAGS = -g -std=gnu++23
-  INCLUDES = -I/home/sheep/googletest/build/install/include -I/home/sheep/Compiler/cx/lexcpp/../toolcpp
+  INCLUDES = -I/home/sheep/Compiler/cx/lexcpp/../toolcpp
   OBJECT_DIR = lexcpp/CMakeFiles/lexio.dir
   OBJECT_FILE_DIR = lexcpp/CMakeFiles/lexio.dir
   TARGET_COMPILE_PDB = lexcpp/CMakeFiles/lexio.dir/lexio.pdb
@@ -144,7 +198,7 @@ build lexcpp/CMakeFiles/lexio.dir/minimize.cpp.o: CXX_COMPILER__lexio_unscanned_
 #############################################
 # Link the static library lexcpp/liblexio.a
 
-build lexcpp/liblexio.a: CXX_STATIC_LIBRARY_LINKER__lexio_DEBUG lexcpp/CMakeFiles/lexio.dir/lexio.cpp.o lexcpp/CMakeFiles/lexio.dir/nfa.cpp.o lexcpp/CMakeFiles/lexio.dir/nfaThompson.cpp.o lexcpp/CMakeFiles/lexio.dir/printNfa.cpp.o lexcpp/CMakeFiles/lexio.dir/dfa.cpp.o lexcpp/CMakeFiles/lexio.dir/dfaTerp.cpp.o lexcpp/CMakeFiles/lexio.dir/minimize.cpp.o || toolcpp/libcompiler.a toolcpp/libhash.a toolcpp/libset.a
+build lexcpp/liblexio.a: CXX_STATIC_LIBRARY_LINKER__lexio_Debug lexcpp/CMakeFiles/lexio.dir/lexio.cpp.o lexcpp/CMakeFiles/lexio.dir/nfa.cpp.o lexcpp/CMakeFiles/lexio.dir/nfaThompson.cpp.o lexcpp/CMakeFiles/lexio.dir/printNfa.cpp.o lexcpp/CMakeFiles/lexio.dir/dfa.cpp.o lexcpp/CMakeFiles/lexio.dir/dfaTerp.cpp.o lexcpp/CMakeFiles/lexio.dir/minimize.cpp.o || toolcpp/libcompiler.a toolcpp/libhash.a toolcpp/libset.a
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = lexcpp/CMakeFiles/lexio.dir
   POST_BUILD = :
@@ -160,75 +214,75 @@ build lexcpp/liblexio.a: CXX_STATIC_LIBRARY_LINKER__lexio_DEBUG lexcpp/CMakeFile
 #############################################
 # Order-only phony target for lex
 
-build cmake_object_order_depends_target_lex: phony || cmake_object_order_depends_target_compiler cmake_object_order_depends_target_hash cmake_object_order_depends_target_lexio cmake_object_order_depends_target_set
+build cmake_object_order_depends_target_lex: phony || cmake_object_order_depends_target_compiler cmake_object_order_depends_target_hash cmake_object_order_depends_target_lexio cmake_object_order_depends_target_set lexcpp/c.lex
 
-build lexcpp/CMakeFiles/lex.dir/lex.cpp.o: CXX_COMPILER__lex_unscanned_DEBUG /home/sheep/Compiler/cx/lexcpp/lex.cpp || cmake_object_order_depends_target_lex
+build lexcpp/CMakeFiles/lex.dir/lex.cpp.o: CXX_COMPILER__lex_unscanned_Debug /home/sheep/Compiler/cx/lexcpp/lex.cpp || cmake_object_order_depends_target_lex
   DEP_FILE = lexcpp/CMakeFiles/lex.dir/lex.cpp.o.d
   FLAGS = -g -std=gnu++23
-  INCLUDES = -I/home/sheep/googletest/build/install/include -I/home/sheep/Compiler/cx/lexcpp/../toolcpp
+  INCLUDES = -I/home/sheep/Compiler/cx/lexcpp/../toolcpp
   OBJECT_DIR = lexcpp/CMakeFiles/lex.dir
   OBJECT_FILE_DIR = lexcpp/CMakeFiles/lex.dir
   TARGET_COMPILE_PDB = lexcpp/CMakeFiles/lex.dir/
   TARGET_PDB = lexcpp/lex.pdb
 
-build lexcpp/CMakeFiles/lex.dir/lexio.cpp.o: CXX_COMPILER__lex_unscanned_DEBUG /home/sheep/Compiler/cx/lexcpp/lexio.cpp || cmake_object_order_depends_target_lex
+build lexcpp/CMakeFiles/lex.dir/lexio.cpp.o: CXX_COMPILER__lex_unscanned_Debug /home/sheep/Compiler/cx/lexcpp/lexio.cpp || cmake_object_order_depends_target_lex
   DEP_FILE = lexcpp/CMakeFiles/lex.dir/lexio.cpp.o.d
   FLAGS = -g -std=gnu++23
-  INCLUDES = -I/home/sheep/googletest/build/install/include -I/home/sheep/Compiler/cx/lexcpp/../toolcpp
+  INCLUDES = -I/home/sheep/Compiler/cx/lexcpp/../toolcpp
   OBJECT_DIR = lexcpp/CMakeFiles/lex.dir
   OBJECT_FILE_DIR = lexcpp/CMakeFiles/lex.dir
   TARGET_COMPILE_PDB = lexcpp/CMakeFiles/lex.dir/
   TARGET_PDB = lexcpp/lex.pdb
 
-build lexcpp/CMakeFiles/lex.dir/nfa.cpp.o: CXX_COMPILER__lex_unscanned_DEBUG /home/sheep/Compiler/cx/lexcpp/nfa.cpp || cmake_object_order_depends_target_lex
+build lexcpp/CMakeFiles/lex.dir/nfa.cpp.o: CXX_COMPILER__lex_unscanned_Debug /home/sheep/Compiler/cx/lexcpp/nfa.cpp || cmake_object_order_depends_target_lex
   DEP_FILE = lexcpp/CMakeFiles/lex.dir/nfa.cpp.o.d
   FLAGS = -g -std=gnu++23
-  INCLUDES = -I/home/sheep/googletest/build/install/include -I/home/sheep/Compiler/cx/lexcpp/../toolcpp
+  INCLUDES = -I/home/sheep/Compiler/cx/lexcpp/../toolcpp
   OBJECT_DIR = lexcpp/CMakeFiles/lex.dir
   OBJECT_FILE_DIR = lexcpp/CMakeFiles/lex.dir
   TARGET_COMPILE_PDB = lexcpp/CMakeFiles/lex.dir/
   TARGET_PDB = lexcpp/lex.pdb
 
-build lexcpp/CMakeFiles/lex.dir/nfaThompson.cpp.o: CXX_COMPILER__lex_unscanned_DEBUG /home/sheep/Compiler/cx/lexcpp/nfaThompson.cpp || cmake_object_order_depends_target_lex
+build lexcpp/CMakeFiles/lex.dir/nfaThompson.cpp.o: CXX_COMPILER__lex_unscanned_Debug /home/sheep/Compiler/cx/lexcpp/nfaThompson.cpp || cmake_object_order_depends_target_lex
   DEP_FILE = lexcpp/CMakeFiles/lex.dir/nfaThompson.cpp.o.d
   FLAGS = -g -std=gnu++23
-  INCLUDES = -I/home/sheep/googletest/build/install/include -I/home/sheep/Compiler/cx/lexcpp/../toolcpp
+  INCLUDES = -I/home/sheep/Compiler/cx/lexcpp/../toolcpp
   OBJECT_DIR = lexcpp/CMakeFiles/lex.dir
   OBJECT_FILE_DIR = lexcpp/CMakeFiles/lex.dir
   TARGET_COMPILE_PDB = lexcpp/CMakeFiles/lex.dir/
   TARGET_PDB = lexcpp/lex.pdb
 
-build lexcpp/CMakeFiles/lex.dir/printNfa.cpp.o: CXX_COMPILER__lex_unscanned_DEBUG /home/sheep/Compiler/cx/lexcpp/printNfa.cpp || cmake_object_order_depends_target_lex
+build lexcpp/CMakeFiles/lex.dir/printNfa.cpp.o: CXX_COMPILER__lex_unscanned_Debug /home/sheep/Compiler/cx/lexcpp/printNfa.cpp || cmake_object_order_depends_target_lex
   DEP_FILE = lexcpp/CMakeFiles/lex.dir/printNfa.cpp.o.d
   FLAGS = -g -std=gnu++23
-  INCLUDES = -I/home/sheep/googletest/build/install/include -I/home/sheep/Compiler/cx/lexcpp/../toolcpp
+  INCLUDES = -I/home/sheep/Compiler/cx/lexcpp/../toolcpp
   OBJECT_DIR = lexcpp/CMakeFiles/lex.dir
   OBJECT_FILE_DIR = lexcpp/CMakeFiles/lex.dir
   TARGET_COMPILE_PDB = lexcpp/CMakeFiles/lex.dir/
   TARGET_PDB = lexcpp/lex.pdb
 
-build lexcpp/CMakeFiles/lex.dir/dfa.cpp.o: CXX_COMPILER__lex_unscanned_DEBUG /home/sheep/Compiler/cx/lexcpp/dfa.cpp || cmake_object_order_depends_target_lex
+build lexcpp/CMakeFiles/lex.dir/dfa.cpp.o: CXX_COMPILER__lex_unscanned_Debug /home/sheep/Compiler/cx/lexcpp/dfa.cpp || cmake_object_order_depends_target_lex
   DEP_FILE = lexcpp/CMakeFiles/lex.dir/dfa.cpp.o.d
   FLAGS = -g -std=gnu++23
-  INCLUDES = -I/home/sheep/googletest/build/install/include -I/home/sheep/Compiler/cx/lexcpp/../toolcpp
+  INCLUDES = -I/home/sheep/Compiler/cx/lexcpp/../toolcpp
   OBJECT_DIR = lexcpp/CMakeFiles/lex.dir
   OBJECT_FILE_DIR = lexcpp/CMakeFiles/lex.dir
   TARGET_COMPILE_PDB = lexcpp/CMakeFiles/lex.dir/
   TARGET_PDB = lexcpp/lex.pdb
 
-build lexcpp/CMakeFiles/lex.dir/dfaTerp.cpp.o: CXX_COMPILER__lex_unscanned_DEBUG /home/sheep/Compiler/cx/lexcpp/dfaTerp.cpp || cmake_object_order_depends_target_lex
+build lexcpp/CMakeFiles/lex.dir/dfaTerp.cpp.o: CXX_COMPILER__lex_unscanned_Debug /home/sheep/Compiler/cx/lexcpp/dfaTerp.cpp || cmake_object_order_depends_target_lex
   DEP_FILE = lexcpp/CMakeFiles/lex.dir/dfaTerp.cpp.o.d
   FLAGS = -g -std=gnu++23
-  INCLUDES = -I/home/sheep/googletest/build/install/include -I/home/sheep/Compiler/cx/lexcpp/../toolcpp
+  INCLUDES = -I/home/sheep/Compiler/cx/lexcpp/../toolcpp
   OBJECT_DIR = lexcpp/CMakeFiles/lex.dir
   OBJECT_FILE_DIR = lexcpp/CMakeFiles/lex.dir
   TARGET_COMPILE_PDB = lexcpp/CMakeFiles/lex.dir/
   TARGET_PDB = lexcpp/lex.pdb
 
-build lexcpp/CMakeFiles/lex.dir/minimize.cpp.o: CXX_COMPILER__lex_unscanned_DEBUG /home/sheep/Compiler/cx/lexcpp/minimize.cpp || cmake_object_order_depends_target_lex
+build lexcpp/CMakeFiles/lex.dir/minimize.cpp.o: CXX_COMPILER__lex_unscanned_Debug /home/sheep/Compiler/cx/lexcpp/minimize.cpp || cmake_object_order_depends_target_lex
   DEP_FILE = lexcpp/CMakeFiles/lex.dir/minimize.cpp.o.d
   FLAGS = -g -std=gnu++23
-  INCLUDES = -I/home/sheep/googletest/build/install/include -I/home/sheep/Compiler/cx/lexcpp/../toolcpp
+  INCLUDES = -I/home/sheep/Compiler/cx/lexcpp/../toolcpp
   OBJECT_DIR = lexcpp/CMakeFiles/lex.dir
   OBJECT_FILE_DIR = lexcpp/CMakeFiles/lex.dir
   TARGET_COMPILE_PDB = lexcpp/CMakeFiles/lex.dir/
@@ -242,16 +296,201 @@ build lexcpp/CMakeFiles/lex.dir/minimize.cpp.o: CXX_COMPILER__lex_unscanned_DEBU
 #############################################
 # Link the executable lexcpp/lex
 
-build lexcpp/lex: CXX_EXECUTABLE_LINKER__lex_DEBUG lexcpp/CMakeFiles/lex.dir/lex.cpp.o lexcpp/CMakeFiles/lex.dir/lexio.cpp.o lexcpp/CMakeFiles/lex.dir/nfa.cpp.o lexcpp/CMakeFiles/lex.dir/nfaThompson.cpp.o lexcpp/CMakeFiles/lex.dir/printNfa.cpp.o lexcpp/CMakeFiles/lex.dir/dfa.cpp.o lexcpp/CMakeFiles/lex.dir/dfaTerp.cpp.o lexcpp/CMakeFiles/lex.dir/minimize.cpp.o | lexcpp/liblexio.a toolcpp/libset.a toolcpp/libhash.a toolcpp/libcompiler.a || lexcpp/liblexio.a toolcpp/libcompiler.a toolcpp/libhash.a toolcpp/libset.a
+build lexcpp/lex: CXX_EXECUTABLE_LINKER__lex_Debug lexcpp/CMakeFiles/lex.dir/lex.cpp.o lexcpp/CMakeFiles/lex.dir/lexio.cpp.o lexcpp/CMakeFiles/lex.dir/nfa.cpp.o lexcpp/CMakeFiles/lex.dir/nfaThompson.cpp.o lexcpp/CMakeFiles/lex.dir/printNfa.cpp.o lexcpp/CMakeFiles/lex.dir/dfa.cpp.o lexcpp/CMakeFiles/lex.dir/dfaTerp.cpp.o lexcpp/CMakeFiles/lex.dir/minimize.cpp.o | lexcpp/liblexio.a toolcpp/libset.a toolcpp/libhash.a toolcpp/libcompiler.a || lexcpp/c.lex lexcpp/liblexio.a toolcpp/libcompiler.a toolcpp/libhash.a toolcpp/libset.a
   FLAGS = -g
-  LINK_LIBRARIES = -Wl,-rpath,/home/sheep/googletest/build/install/lib  lexcpp/liblexio.a  toolcpp/libset.a  toolcpp/libhash.a  toolcpp/libcompiler.a  -lgtest  -lgtest_main  -lgmock  -lgmock_main
-  LINK_PATH = -L/home/sheep/googletest/build/install/lib
+  LINK_LIBRARIES = lexcpp/liblexio.a  toolcpp/libset.a  toolcpp/libhash.a  toolcpp/libcompiler.a
   OBJECT_DIR = lexcpp/CMakeFiles/lex.dir
-  POST_BUILD = cd /home/sheep/Compiler/cx/build/lexcpp && valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./lex
+  POST_BUILD = :
   PRE_LINK = :
   TARGET_COMPILE_PDB = lexcpp/CMakeFiles/lex.dir/
   TARGET_FILE = lexcpp/lex
   TARGET_PDB = lexcpp/lex.pdb
+
+
+#############################################
+# Utility command for Experimental
+
+build lexcpp/Experimental: phony lexcpp/CMakeFiles/Experimental
+
+
+#############################################
+# Utility command for Nightly
+
+build lexcpp/Nightly: phony lexcpp/CMakeFiles/Nightly
+
+
+#############################################
+# Utility command for Continuous
+
+build lexcpp/Continuous: phony lexcpp/CMakeFiles/Continuous
+
+
+#############################################
+# Utility command for NightlyMemoryCheck
+
+build lexcpp/NightlyMemoryCheck: phony lexcpp/CMakeFiles/NightlyMemoryCheck
+
+
+#############################################
+# Utility command for NightlyStart
+
+build lexcpp/NightlyStart: phony lexcpp/CMakeFiles/NightlyStart
+
+
+#############################################
+# Utility command for NightlyUpdate
+
+build lexcpp/NightlyUpdate: phony lexcpp/CMakeFiles/NightlyUpdate
+
+
+#############################################
+# Utility command for NightlyConfigure
+
+build lexcpp/NightlyConfigure: phony lexcpp/CMakeFiles/NightlyConfigure
+
+
+#############################################
+# Utility command for NightlyBuild
+
+build lexcpp/NightlyBuild: phony lexcpp/CMakeFiles/NightlyBuild
+
+
+#############################################
+# Utility command for NightlyTest
+
+build lexcpp/NightlyTest: phony lexcpp/CMakeFiles/NightlyTest
+
+
+#############################################
+# Utility command for NightlyCoverage
+
+build lexcpp/NightlyCoverage: phony lexcpp/CMakeFiles/NightlyCoverage
+
+
+#############################################
+# Utility command for NightlyMemCheck
+
+build lexcpp/NightlyMemCheck: phony lexcpp/CMakeFiles/NightlyMemCheck
+
+
+#############################################
+# Utility command for NightlySubmit
+
+build lexcpp/NightlySubmit: phony lexcpp/CMakeFiles/NightlySubmit
+
+
+#############################################
+# Utility command for ExperimentalStart
+
+build lexcpp/ExperimentalStart: phony lexcpp/CMakeFiles/ExperimentalStart
+
+
+#############################################
+# Utility command for ExperimentalUpdate
+
+build lexcpp/ExperimentalUpdate: phony lexcpp/CMakeFiles/ExperimentalUpdate
+
+
+#############################################
+# Utility command for ExperimentalConfigure
+
+build lexcpp/ExperimentalConfigure: phony lexcpp/CMakeFiles/ExperimentalConfigure
+
+
+#############################################
+# Utility command for ExperimentalBuild
+
+build lexcpp/ExperimentalBuild: phony lexcpp/CMakeFiles/ExperimentalBuild
+
+
+#############################################
+# Utility command for ExperimentalTest
+
+build lexcpp/ExperimentalTest: phony lexcpp/CMakeFiles/ExperimentalTest
+
+
+#############################################
+# Utility command for ExperimentalCoverage
+
+build lexcpp/ExperimentalCoverage: phony lexcpp/CMakeFiles/ExperimentalCoverage
+
+
+#############################################
+# Utility command for ExperimentalMemCheck
+
+build lexcpp/ExperimentalMemCheck: phony lexcpp/CMakeFiles/ExperimentalMemCheck
+
+
+#############################################
+# Utility command for ExperimentalSubmit
+
+build lexcpp/ExperimentalSubmit: phony lexcpp/CMakeFiles/ExperimentalSubmit
+
+
+#############################################
+# Utility command for ContinuousStart
+
+build lexcpp/ContinuousStart: phony lexcpp/CMakeFiles/ContinuousStart
+
+
+#############################################
+# Utility command for ContinuousUpdate
+
+build lexcpp/ContinuousUpdate: phony lexcpp/CMakeFiles/ContinuousUpdate
+
+
+#############################################
+# Utility command for ContinuousConfigure
+
+build lexcpp/ContinuousConfigure: phony lexcpp/CMakeFiles/ContinuousConfigure
+
+
+#############################################
+# Utility command for ContinuousBuild
+
+build lexcpp/ContinuousBuild: phony lexcpp/CMakeFiles/ContinuousBuild
+
+
+#############################################
+# Utility command for ContinuousTest
+
+build lexcpp/ContinuousTest: phony lexcpp/CMakeFiles/ContinuousTest
+
+
+#############################################
+# Utility command for ContinuousCoverage
+
+build lexcpp/ContinuousCoverage: phony lexcpp/CMakeFiles/ContinuousCoverage
+
+
+#############################################
+# Utility command for ContinuousMemCheck
+
+build lexcpp/ContinuousMemCheck: phony lexcpp/CMakeFiles/ContinuousMemCheck
+
+
+#############################################
+# Utility command for ContinuousSubmit
+
+build lexcpp/ContinuousSubmit: phony lexcpp/CMakeFiles/ContinuousSubmit
+
+
+#############################################
+# Utility command for c.lex
+
+build lexcpp/c.lex: phony lexcpp/CMakeFiles/c.lex
+
+
+#############################################
+# Utility command for test
+
+build lexcpp/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = cd /home/sheep/Compiler/cx/build/lexcpp && /usr/bin/ctest --force-new-ctest-process
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build lexcpp/test: phony lexcpp/CMakeFiles/test.util
 
 
 #############################################
@@ -277,6 +516,279 @@ build lexcpp/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
 
 build lexcpp/rebuild_cache: phony lexcpp/CMakeFiles/rebuild_cache.util
 
+
+#############################################
+# Utility command for list_install_components
+
+build lexcpp/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build lexcpp/CMakeFiles/install.util: CUSTOM_COMMAND lexcpp/all
+  COMMAND = cd /home/sheep/Compiler/cx/build/lexcpp && /usr/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build lexcpp/install: phony lexcpp/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build lexcpp/CMakeFiles/install/local.util: CUSTOM_COMMAND lexcpp/all
+  COMMAND = cd /home/sheep/Compiler/cx/build/lexcpp && /usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build lexcpp/install/local: phony lexcpp/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build lexcpp/CMakeFiles/install/strip.util: CUSTOM_COMMAND lexcpp/all
+  COMMAND = cd /home/sheep/Compiler/cx/build/lexcpp && /usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build lexcpp/install/strip: phony lexcpp/CMakeFiles/install/strip.util
+
+
+#############################################
+# Custom command for lexcpp/CMakeFiles/Experimental
+
+build lexcpp/CMakeFiles/Experimental | ${cmake_ninja_workdir}lexcpp/CMakeFiles/Experimental: CUSTOM_COMMAND
+  COMMAND = cd /home/sheep/Compiler/cx/build/lexcpp && /usr/bin/ctest -D Experimental
+  pool = console
+
+
+#############################################
+# Custom command for lexcpp/CMakeFiles/Nightly
+
+build lexcpp/CMakeFiles/Nightly | ${cmake_ninja_workdir}lexcpp/CMakeFiles/Nightly: CUSTOM_COMMAND
+  COMMAND = cd /home/sheep/Compiler/cx/build/lexcpp && /usr/bin/ctest -D Nightly
+  pool = console
+
+
+#############################################
+# Custom command for lexcpp/CMakeFiles/Continuous
+
+build lexcpp/CMakeFiles/Continuous | ${cmake_ninja_workdir}lexcpp/CMakeFiles/Continuous: CUSTOM_COMMAND
+  COMMAND = cd /home/sheep/Compiler/cx/build/lexcpp && /usr/bin/ctest -D Continuous
+  pool = console
+
+
+#############################################
+# Custom command for lexcpp/CMakeFiles/NightlyMemoryCheck
+
+build lexcpp/CMakeFiles/NightlyMemoryCheck | ${cmake_ninja_workdir}lexcpp/CMakeFiles/NightlyMemoryCheck: CUSTOM_COMMAND
+  COMMAND = cd /home/sheep/Compiler/cx/build/lexcpp && /usr/bin/ctest -D NightlyMemoryCheck
+  pool = console
+
+
+#############################################
+# Custom command for lexcpp/CMakeFiles/NightlyStart
+
+build lexcpp/CMakeFiles/NightlyStart | ${cmake_ninja_workdir}lexcpp/CMakeFiles/NightlyStart: CUSTOM_COMMAND
+  COMMAND = cd /home/sheep/Compiler/cx/build/lexcpp && /usr/bin/ctest -D NightlyStart
+  pool = console
+
+
+#############################################
+# Custom command for lexcpp/CMakeFiles/NightlyUpdate
+
+build lexcpp/CMakeFiles/NightlyUpdate | ${cmake_ninja_workdir}lexcpp/CMakeFiles/NightlyUpdate: CUSTOM_COMMAND
+  COMMAND = cd /home/sheep/Compiler/cx/build/lexcpp && /usr/bin/ctest -D NightlyUpdate
+  pool = console
+
+
+#############################################
+# Custom command for lexcpp/CMakeFiles/NightlyConfigure
+
+build lexcpp/CMakeFiles/NightlyConfigure | ${cmake_ninja_workdir}lexcpp/CMakeFiles/NightlyConfigure: CUSTOM_COMMAND
+  COMMAND = cd /home/sheep/Compiler/cx/build/lexcpp && /usr/bin/ctest -D NightlyConfigure
+  pool = console
+
+
+#############################################
+# Custom command for lexcpp/CMakeFiles/NightlyBuild
+
+build lexcpp/CMakeFiles/NightlyBuild | ${cmake_ninja_workdir}lexcpp/CMakeFiles/NightlyBuild: CUSTOM_COMMAND
+  COMMAND = cd /home/sheep/Compiler/cx/build/lexcpp && /usr/bin/ctest -D NightlyBuild
+  pool = console
+
+
+#############################################
+# Custom command for lexcpp/CMakeFiles/NightlyTest
+
+build lexcpp/CMakeFiles/NightlyTest | ${cmake_ninja_workdir}lexcpp/CMakeFiles/NightlyTest: CUSTOM_COMMAND
+  COMMAND = cd /home/sheep/Compiler/cx/build/lexcpp && /usr/bin/ctest -D NightlyTest
+  pool = console
+
+
+#############################################
+# Custom command for lexcpp/CMakeFiles/NightlyCoverage
+
+build lexcpp/CMakeFiles/NightlyCoverage | ${cmake_ninja_workdir}lexcpp/CMakeFiles/NightlyCoverage: CUSTOM_COMMAND
+  COMMAND = cd /home/sheep/Compiler/cx/build/lexcpp && /usr/bin/ctest -D NightlyCoverage
+  pool = console
+
+
+#############################################
+# Custom command for lexcpp/CMakeFiles/NightlyMemCheck
+
+build lexcpp/CMakeFiles/NightlyMemCheck | ${cmake_ninja_workdir}lexcpp/CMakeFiles/NightlyMemCheck: CUSTOM_COMMAND
+  COMMAND = cd /home/sheep/Compiler/cx/build/lexcpp && /usr/bin/ctest -D NightlyMemCheck
+  pool = console
+
+
+#############################################
+# Custom command for lexcpp/CMakeFiles/NightlySubmit
+
+build lexcpp/CMakeFiles/NightlySubmit | ${cmake_ninja_workdir}lexcpp/CMakeFiles/NightlySubmit: CUSTOM_COMMAND
+  COMMAND = cd /home/sheep/Compiler/cx/build/lexcpp && /usr/bin/ctest -D NightlySubmit
+  pool = console
+
+
+#############################################
+# Custom command for lexcpp/CMakeFiles/ExperimentalStart
+
+build lexcpp/CMakeFiles/ExperimentalStart | ${cmake_ninja_workdir}lexcpp/CMakeFiles/ExperimentalStart: CUSTOM_COMMAND
+  COMMAND = cd /home/sheep/Compiler/cx/build/lexcpp && /usr/bin/ctest -D ExperimentalStart
+  pool = console
+
+
+#############################################
+# Custom command for lexcpp/CMakeFiles/ExperimentalUpdate
+
+build lexcpp/CMakeFiles/ExperimentalUpdate | ${cmake_ninja_workdir}lexcpp/CMakeFiles/ExperimentalUpdate: CUSTOM_COMMAND
+  COMMAND = cd /home/sheep/Compiler/cx/build/lexcpp && /usr/bin/ctest -D ExperimentalUpdate
+  pool = console
+
+
+#############################################
+# Custom command for lexcpp/CMakeFiles/ExperimentalConfigure
+
+build lexcpp/CMakeFiles/ExperimentalConfigure | ${cmake_ninja_workdir}lexcpp/CMakeFiles/ExperimentalConfigure: CUSTOM_COMMAND
+  COMMAND = cd /home/sheep/Compiler/cx/build/lexcpp && /usr/bin/ctest -D ExperimentalConfigure
+  pool = console
+
+
+#############################################
+# Custom command for lexcpp/CMakeFiles/ExperimentalBuild
+
+build lexcpp/CMakeFiles/ExperimentalBuild | ${cmake_ninja_workdir}lexcpp/CMakeFiles/ExperimentalBuild: CUSTOM_COMMAND
+  COMMAND = cd /home/sheep/Compiler/cx/build/lexcpp && /usr/bin/ctest -D ExperimentalBuild
+  pool = console
+
+
+#############################################
+# Custom command for lexcpp/CMakeFiles/ExperimentalTest
+
+build lexcpp/CMakeFiles/ExperimentalTest | ${cmake_ninja_workdir}lexcpp/CMakeFiles/ExperimentalTest: CUSTOM_COMMAND
+  COMMAND = cd /home/sheep/Compiler/cx/build/lexcpp && /usr/bin/ctest -D ExperimentalTest
+  pool = console
+
+
+#############################################
+# Custom command for lexcpp/CMakeFiles/ExperimentalCoverage
+
+build lexcpp/CMakeFiles/ExperimentalCoverage | ${cmake_ninja_workdir}lexcpp/CMakeFiles/ExperimentalCoverage: CUSTOM_COMMAND
+  COMMAND = cd /home/sheep/Compiler/cx/build/lexcpp && /usr/bin/ctest -D ExperimentalCoverage
+  pool = console
+
+
+#############################################
+# Custom command for lexcpp/CMakeFiles/ExperimentalMemCheck
+
+build lexcpp/CMakeFiles/ExperimentalMemCheck | ${cmake_ninja_workdir}lexcpp/CMakeFiles/ExperimentalMemCheck: CUSTOM_COMMAND
+  COMMAND = cd /home/sheep/Compiler/cx/build/lexcpp && /usr/bin/ctest -D ExperimentalMemCheck
+  pool = console
+
+
+#############################################
+# Custom command for lexcpp/CMakeFiles/ExperimentalSubmit
+
+build lexcpp/CMakeFiles/ExperimentalSubmit | ${cmake_ninja_workdir}lexcpp/CMakeFiles/ExperimentalSubmit: CUSTOM_COMMAND
+  COMMAND = cd /home/sheep/Compiler/cx/build/lexcpp && /usr/bin/ctest -D ExperimentalSubmit
+  pool = console
+
+
+#############################################
+# Custom command for lexcpp/CMakeFiles/ContinuousStart
+
+build lexcpp/CMakeFiles/ContinuousStart | ${cmake_ninja_workdir}lexcpp/CMakeFiles/ContinuousStart: CUSTOM_COMMAND
+  COMMAND = cd /home/sheep/Compiler/cx/build/lexcpp && /usr/bin/ctest -D ContinuousStart
+  pool = console
+
+
+#############################################
+# Custom command for lexcpp/CMakeFiles/ContinuousUpdate
+
+build lexcpp/CMakeFiles/ContinuousUpdate | ${cmake_ninja_workdir}lexcpp/CMakeFiles/ContinuousUpdate: CUSTOM_COMMAND
+  COMMAND = cd /home/sheep/Compiler/cx/build/lexcpp && /usr/bin/ctest -D ContinuousUpdate
+  pool = console
+
+
+#############################################
+# Custom command for lexcpp/CMakeFiles/ContinuousConfigure
+
+build lexcpp/CMakeFiles/ContinuousConfigure | ${cmake_ninja_workdir}lexcpp/CMakeFiles/ContinuousConfigure: CUSTOM_COMMAND
+  COMMAND = cd /home/sheep/Compiler/cx/build/lexcpp && /usr/bin/ctest -D ContinuousConfigure
+  pool = console
+
+
+#############################################
+# Custom command for lexcpp/CMakeFiles/ContinuousBuild
+
+build lexcpp/CMakeFiles/ContinuousBuild | ${cmake_ninja_workdir}lexcpp/CMakeFiles/ContinuousBuild: CUSTOM_COMMAND
+  COMMAND = cd /home/sheep/Compiler/cx/build/lexcpp && /usr/bin/ctest -D ContinuousBuild
+  pool = console
+
+
+#############################################
+# Custom command for lexcpp/CMakeFiles/ContinuousTest
+
+build lexcpp/CMakeFiles/ContinuousTest | ${cmake_ninja_workdir}lexcpp/CMakeFiles/ContinuousTest: CUSTOM_COMMAND
+  COMMAND = cd /home/sheep/Compiler/cx/build/lexcpp && /usr/bin/ctest -D ContinuousTest
+  pool = console
+
+
+#############################################
+# Custom command for lexcpp/CMakeFiles/ContinuousCoverage
+
+build lexcpp/CMakeFiles/ContinuousCoverage | ${cmake_ninja_workdir}lexcpp/CMakeFiles/ContinuousCoverage: CUSTOM_COMMAND
+  COMMAND = cd /home/sheep/Compiler/cx/build/lexcpp && /usr/bin/ctest -D ContinuousCoverage
+  pool = console
+
+
+#############################################
+# Custom command for lexcpp/CMakeFiles/ContinuousMemCheck
+
+build lexcpp/CMakeFiles/ContinuousMemCheck | ${cmake_ninja_workdir}lexcpp/CMakeFiles/ContinuousMemCheck: CUSTOM_COMMAND
+  COMMAND = cd /home/sheep/Compiler/cx/build/lexcpp && /usr/bin/ctest -D ContinuousMemCheck
+  pool = console
+
+
+#############################################
+# Custom command for lexcpp/CMakeFiles/ContinuousSubmit
+
+build lexcpp/CMakeFiles/ContinuousSubmit | ${cmake_ninja_workdir}lexcpp/CMakeFiles/ContinuousSubmit: CUSTOM_COMMAND
+  COMMAND = cd /home/sheep/Compiler/cx/build/lexcpp && /usr/bin/ctest -D ContinuousSubmit
+  pool = console
+
+
+#############################################
+# Custom command for lexcpp/CMakeFiles/c.lex
+
+build lexcpp/CMakeFiles/c.lex | ${cmake_ninja_workdir}lexcpp/CMakeFiles/c.lex: CUSTOM_COMMAND
+  COMMAND = cd /home/sheep/Compiler/cx/build/lexcpp && /usr/bin/cmake -E copy /home/sheep/Compiler/cx/lexcpp/c.lex /home/sheep/Compiler/cx/build/lexcpp/c.lex
+
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
 # /home/sheep/Compiler/cx/CMakeLists.txt
@@ -294,7 +806,6 @@ build cmake_object_order_depends_target_set: phony || toolcpp/CMakeFiles/set.dir
 build toolcpp/CMakeFiles/set.dir/set.cpp.o: CXX_COMPILER__set_unscanned_DEBUG /home/sheep/Compiler/cx/toolcpp/set.cpp || cmake_object_order_depends_target_set
   DEP_FILE = toolcpp/CMakeFiles/set.dir/set.cpp.o.d
   FLAGS = -g -std=gnu++23 -DDEBUG -Wall -Werror
-  INCLUDES = -I/home/sheep/googletest/build/install/include
   OBJECT_DIR = toolcpp/CMakeFiles/set.dir
   OBJECT_FILE_DIR = toolcpp/CMakeFiles/set.dir
   TARGET_COMPILE_PDB = toolcpp/CMakeFiles/set.dir/set.pdb
@@ -329,7 +840,6 @@ build cmake_object_order_depends_target_compiler: phony || toolcpp/CMakeFiles/co
 build toolcpp/CMakeFiles/compiler.dir/compiler.cpp.o: CXX_COMPILER__compiler_unscanned_DEBUG /home/sheep/Compiler/cx/toolcpp/compiler.cpp || cmake_object_order_depends_target_compiler
   DEP_FILE = toolcpp/CMakeFiles/compiler.dir/compiler.cpp.o.d
   FLAGS = -g -std=gnu++23 -DDEBUG -Wall -Werror
-  INCLUDES = -I/home/sheep/googletest/build/install/include
   OBJECT_DIR = toolcpp/CMakeFiles/compiler.dir
   OBJECT_FILE_DIR = toolcpp/CMakeFiles/compiler.dir
   TARGET_COMPILE_PDB = toolcpp/CMakeFiles/compiler.dir/compiler.pdb
@@ -385,12 +895,12 @@ build toolcpp/libhash.a: CXX_STATIC_LIBRARY_LINKER__hash_DEBUG
 #############################################
 # Order-only phony target for setTest
 
-build cmake_object_order_depends_target_setTest: phony || cmake_object_order_depends_target_set
+build cmake_object_order_depends_target_setTest: phony || cmake_object_order_depends_target_gmock cmake_object_order_depends_target_gmock_main cmake_object_order_depends_target_gtest cmake_object_order_depends_target_gtest_main cmake_object_order_depends_target_set
 
 build toolcpp/CMakeFiles/setTest.dir/setTest.cpp.o: CXX_COMPILER__setTest_unscanned_DEBUG /home/sheep/Compiler/cx/toolcpp/setTest.cpp || cmake_object_order_depends_target_setTest
   DEP_FILE = toolcpp/CMakeFiles/setTest.dir/setTest.cpp.o.d
   FLAGS = -g -std=gnu++23 -DDEBUG -Wall -Werror
-  INCLUDES = -I/home/sheep/googletest/build/install/include
+  INCLUDES = -isystem /home/sheep/Compiler/cx/build/_deps/googletest-src/googletest/include -isystem /home/sheep/Compiler/cx/build/_deps/googletest-src/googletest -isystem /home/sheep/Compiler/cx/build/_deps/googletest-src/googlemock/include -isystem /home/sheep/Compiler/cx/build/_deps/googletest-src/googlemock
   OBJECT_DIR = toolcpp/CMakeFiles/setTest.dir
   OBJECT_FILE_DIR = toolcpp/CMakeFiles/setTest.dir
   TARGET_COMPILE_PDB = toolcpp/CMakeFiles/setTest.dir/
@@ -404,10 +914,9 @@ build toolcpp/CMakeFiles/setTest.dir/setTest.cpp.o: CXX_COMPILER__setTest_unscan
 #############################################
 # Link the executable toolcpp/setTest
 
-build toolcpp/setTest: CXX_EXECUTABLE_LINKER__setTest_DEBUG toolcpp/CMakeFiles/setTest.dir/setTest.cpp.o | toolcpp/libset.a || toolcpp/libset.a
+build toolcpp/setTest: CXX_EXECUTABLE_LINKER__setTest_DEBUG toolcpp/CMakeFiles/setTest.dir/setTest.cpp.o | toolcpp/libset.a lib/libgtest_main.a lib/libgmock_main.a lib/libgmock.a lib/libgtest.a || lib/libgmock.a lib/libgmock_main.a lib/libgtest.a lib/libgtest_main.a toolcpp/libset.a
   FLAGS = -g
-  LINK_LIBRARIES = -Wl,-rpath,/home/sheep/googletest/build/install/lib  toolcpp/libset.a  -lgtest  -lgtest_main  -lgmock  -lgmock_main
-  LINK_PATH = -L/home/sheep/googletest/build/install/lib
+  LINK_LIBRARIES = toolcpp/libset.a  lib/libgtest_main.a  lib/libgmock_main.a  lib/libgmock.a  lib/libgtest.a  -lpthread
   OBJECT_DIR = toolcpp/CMakeFiles/setTest.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -416,55 +925,18 @@ build toolcpp/setTest: CXX_EXECUTABLE_LINKER__setTest_DEBUG toolcpp/CMakeFiles/s
   TARGET_PDB = toolcpp/setTest.pdb
 
 # =============================================================================
-# Object build statements for EXECUTABLE target setCompiler
-
-
-#############################################
-# Order-only phony target for setCompiler
-
-build cmake_object_order_depends_target_setCompiler: phony || cmake_object_order_depends_target_compiler
-
-build toolcpp/CMakeFiles/setCompiler.dir/compilerTest.cpp.o: CXX_COMPILER__setCompiler_unscanned_DEBUG /home/sheep/Compiler/cx/toolcpp/compilerTest.cpp || cmake_object_order_depends_target_setCompiler
-  DEP_FILE = toolcpp/CMakeFiles/setCompiler.dir/compilerTest.cpp.o.d
-  FLAGS = -g -std=gnu++23 -DDEBUG -Wall -Werror
-  INCLUDES = -I/home/sheep/googletest/build/install/include
-  OBJECT_DIR = toolcpp/CMakeFiles/setCompiler.dir
-  OBJECT_FILE_DIR = toolcpp/CMakeFiles/setCompiler.dir
-  TARGET_COMPILE_PDB = toolcpp/CMakeFiles/setCompiler.dir/
-  TARGET_PDB = toolcpp/setCompiler.pdb
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target setCompiler
-
-
-#############################################
-# Link the executable toolcpp/setCompiler
-
-build toolcpp/setCompiler: CXX_EXECUTABLE_LINKER__setCompiler_DEBUG toolcpp/CMakeFiles/setCompiler.dir/compilerTest.cpp.o | toolcpp/libcompiler.a || toolcpp/libcompiler.a
-  FLAGS = -g
-  LINK_LIBRARIES = -Wl,-rpath,/home/sheep/googletest/build/install/lib  toolcpp/libcompiler.a  -lgtest  -lgtest  -lgtest_main  -lgmock  -lgmock_main
-  LINK_PATH = -L/home/sheep/googletest/build/install/lib
-  OBJECT_DIR = toolcpp/CMakeFiles/setCompiler.dir
-  POST_BUILD = :
-  PRE_LINK = :
-  TARGET_COMPILE_PDB = toolcpp/CMakeFiles/setCompiler.dir/
-  TARGET_FILE = toolcpp/setCompiler
-  TARGET_PDB = toolcpp/setCompiler.pdb
-
-# =============================================================================
 # Object build statements for EXECUTABLE target hashTest
 
 
 #############################################
 # Order-only phony target for hashTest
 
-build cmake_object_order_depends_target_hashTest: phony || cmake_object_order_depends_target_compiler
+build cmake_object_order_depends_target_hashTest: phony || cmake_object_order_depends_target_compiler cmake_object_order_depends_target_gmock cmake_object_order_depends_target_gmock_main cmake_object_order_depends_target_gtest cmake_object_order_depends_target_gtest_main cmake_object_order_depends_target_hash
 
 build toolcpp/CMakeFiles/hashTest.dir/hashTest.cpp.o: CXX_COMPILER__hashTest_unscanned_DEBUG /home/sheep/Compiler/cx/toolcpp/hashTest.cpp || cmake_object_order_depends_target_hashTest
   DEP_FILE = toolcpp/CMakeFiles/hashTest.dir/hashTest.cpp.o.d
   FLAGS = -g -std=gnu++23 -DDEBUG -Wall -Werror
-  INCLUDES = -I/home/sheep/googletest/build/install/include
+  INCLUDES = -isystem /home/sheep/Compiler/cx/build/_deps/googletest-src/googletest/include -isystem /home/sheep/Compiler/cx/build/_deps/googletest-src/googletest -isystem /home/sheep/Compiler/cx/build/_deps/googletest-src/googlemock/include -isystem /home/sheep/Compiler/cx/build/_deps/googletest-src/googlemock
   OBJECT_DIR = toolcpp/CMakeFiles/hashTest.dir
   OBJECT_FILE_DIR = toolcpp/CMakeFiles/hashTest.dir
   TARGET_COMPILE_PDB = toolcpp/CMakeFiles/hashTest.dir/
@@ -478,16 +950,27 @@ build toolcpp/CMakeFiles/hashTest.dir/hashTest.cpp.o: CXX_COMPILER__hashTest_uns
 #############################################
 # Link the executable toolcpp/hashTest
 
-build toolcpp/hashTest: CXX_EXECUTABLE_LINKER__hashTest_DEBUG toolcpp/CMakeFiles/hashTest.dir/hashTest.cpp.o | toolcpp/libcompiler.a || toolcpp/libcompiler.a
+build toolcpp/hashTest: CXX_EXECUTABLE_LINKER__hashTest_DEBUG toolcpp/CMakeFiles/hashTest.dir/hashTest.cpp.o | toolcpp/libhash.a toolcpp/libcompiler.a lib/libgtest_main.a lib/libgmock_main.a lib/libgmock.a lib/libgtest.a || lib/libgmock.a lib/libgmock_main.a lib/libgtest.a lib/libgtest_main.a toolcpp/libcompiler.a toolcpp/libhash.a
   FLAGS = -g
-  LINK_LIBRARIES = -Wl,-rpath,/home/sheep/googletest/build/install/lib  toolcpp/libcompiler.a  -lgtest  -lgtest_main  -lgmock  -lgmock_main
-  LINK_PATH = -L/home/sheep/googletest/build/install/lib
+  LINK_LIBRARIES = toolcpp/libhash.a  toolcpp/libcompiler.a  lib/libgtest_main.a  lib/libgmock_main.a  lib/libgmock.a  lib/libgtest.a  -lpthread
   OBJECT_DIR = toolcpp/CMakeFiles/hashTest.dir
   POST_BUILD = :
   PRE_LINK = :
   TARGET_COMPILE_PDB = toolcpp/CMakeFiles/hashTest.dir/
   TARGET_FILE = toolcpp/hashTest
   TARGET_PDB = toolcpp/hashTest.pdb
+
+
+#############################################
+# Utility command for test
+
+build toolcpp/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = cd /home/sheep/Compiler/cx/build/toolcpp && /usr/bin/ctest --force-new-ctest-process
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build toolcpp/test: phony toolcpp/CMakeFiles/test.util
 
 
 #############################################
@@ -513,10 +996,507 @@ build toolcpp/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
 
 build toolcpp/rebuild_cache: phony toolcpp/CMakeFiles/rebuild_cache.util
 
+
+#############################################
+# Utility command for list_install_components
+
+build toolcpp/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build toolcpp/CMakeFiles/install.util: CUSTOM_COMMAND toolcpp/all
+  COMMAND = cd /home/sheep/Compiler/cx/build/toolcpp && /usr/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build toolcpp/install: phony toolcpp/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build toolcpp/CMakeFiles/install/local.util: CUSTOM_COMMAND toolcpp/all
+  COMMAND = cd /home/sheep/Compiler/cx/build/toolcpp && /usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build toolcpp/install/local: phony toolcpp/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build toolcpp/CMakeFiles/install/strip.util: CUSTOM_COMMAND toolcpp/all
+  COMMAND = cd /home/sheep/Compiler/cx/build/toolcpp && /usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build toolcpp/install/strip: phony toolcpp/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /home/sheep/Compiler/cx/toolcpp/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for test
+
+build _deps/googletest-build/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = cd /home/sheep/Compiler/cx/build/_deps/googletest-build && /usr/bin/ctest --force-new-ctest-process
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build _deps/googletest-build/test: phony _deps/googletest-build/CMakeFiles/test.util
+
+
+#############################################
+# Utility command for edit_cache
+
+build _deps/googletest-build/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/sheep/Compiler/cx/build/_deps/googletest-build && /usr/bin/ccmake -S/home/sheep/Compiler/cx -B/home/sheep/Compiler/cx/build
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build _deps/googletest-build/edit_cache: phony _deps/googletest-build/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build _deps/googletest-build/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/sheep/Compiler/cx/build/_deps/googletest-build && /usr/bin/cmake --regenerate-during-build -S/home/sheep/Compiler/cx -B/home/sheep/Compiler/cx/build
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build _deps/googletest-build/rebuild_cache: phony _deps/googletest-build/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build _deps/googletest-build/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build _deps/googletest-build/CMakeFiles/install.util: CUSTOM_COMMAND _deps/googletest-build/all
+  COMMAND = cd /home/sheep/Compiler/cx/build/_deps/googletest-build && /usr/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build _deps/googletest-build/install: phony _deps/googletest-build/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build _deps/googletest-build/CMakeFiles/install/local.util: CUSTOM_COMMAND _deps/googletest-build/all
+  COMMAND = cd /home/sheep/Compiler/cx/build/_deps/googletest-build && /usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build _deps/googletest-build/install/local: phony _deps/googletest-build/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build _deps/googletest-build/CMakeFiles/install/strip.util: CUSTOM_COMMAND _deps/googletest-build/all
+  COMMAND = cd /home/sheep/Compiler/cx/build/_deps/googletest-build && /usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build _deps/googletest-build/install/strip: phony _deps/googletest-build/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /home/sheep/Compiler/cx/build/_deps/googletest-src/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target gmock
+
+
+#############################################
+# Order-only phony target for gmock
+
+build cmake_object_order_depends_target_gmock: phony || cmake_object_order_depends_target_gtest
+
+build _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o: CXX_COMPILER__gmock_unscanned_DEBUG /home/sheep/Compiler/cx/build/_deps/googletest-src/googlemock/src/gmock-all.cc || cmake_object_order_depends_target_gmock
+  DEP_FILE = _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o.d
+  FLAGS = -g -std=c++23 -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -DDEBUG -Wall -Werror
+  INCLUDES = -I/home/sheep/Compiler/cx/build/_deps/googletest-src/googlemock/include -I/home/sheep/Compiler/cx/build/_deps/googletest-src/googlemock -isystem /home/sheep/Compiler/cx/build/_deps/googletest-src/googletest/include -isystem /home/sheep/Compiler/cx/build/_deps/googletest-src/googletest
+  OBJECT_DIR = _deps/googletest-build/googlemock/CMakeFiles/gmock.dir
+  OBJECT_FILE_DIR = _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src
+  TARGET_COMPILE_PDB = lib/libgmockpdb_debug_postfix-NOTFOUND.pdb
+  TARGET_PDB = bin/libgmockpdb_debug_postfix-NOTFOUND.pdb
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target gmock
+
+
+#############################################
+# Link the static library lib/libgmock.a
+
+build lib/libgmock.a: CXX_STATIC_LIBRARY_LINKER__gmock_DEBUG _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o || lib/libgtest.a
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = _deps/googletest-build/googlemock/CMakeFiles/gmock.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_COMPILE_PDB = lib/libgmockpdb_debug_postfix-NOTFOUND.pdb
+  TARGET_FILE = lib/libgmock.a
+  TARGET_PDB = bin/libgmockpdb_debug_postfix-NOTFOUND.pdb
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target gmock_main
+
+
+#############################################
+# Order-only phony target for gmock_main
+
+build cmake_object_order_depends_target_gmock_main: phony || cmake_object_order_depends_target_gmock cmake_object_order_depends_target_gtest
+
+build _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o: CXX_COMPILER__gmock_main_unscanned_DEBUG /home/sheep/Compiler/cx/build/_deps/googletest-src/googlemock/src/gmock_main.cc || cmake_object_order_depends_target_gmock_main
+  DEP_FILE = _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o.d
+  FLAGS = -g -std=c++23 -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -DDEBUG -Wall -Werror
+  INCLUDES = -isystem /home/sheep/Compiler/cx/build/_deps/googletest-src/googlemock/include -isystem /home/sheep/Compiler/cx/build/_deps/googletest-src/googlemock -isystem /home/sheep/Compiler/cx/build/_deps/googletest-src/googletest/include -isystem /home/sheep/Compiler/cx/build/_deps/googletest-src/googletest
+  OBJECT_DIR = _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir
+  OBJECT_FILE_DIR = _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src
+  TARGET_COMPILE_PDB = lib/libgmock_mainpdb_debug_postfix-NOTFOUND.pdb
+  TARGET_PDB = bin/libgmock_mainpdb_debug_postfix-NOTFOUND.pdb
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target gmock_main
+
+
+#############################################
+# Link the static library lib/libgmock_main.a
+
+build lib/libgmock_main.a: CXX_STATIC_LIBRARY_LINKER__gmock_main_DEBUG _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o || lib/libgmock.a lib/libgtest.a
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_COMPILE_PDB = lib/libgmock_mainpdb_debug_postfix-NOTFOUND.pdb
+  TARGET_FILE = lib/libgmock_main.a
+  TARGET_PDB = bin/libgmock_mainpdb_debug_postfix-NOTFOUND.pdb
+
+
+#############################################
+# Utility command for test
+
+build _deps/googletest-build/googlemock/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = cd /home/sheep/Compiler/cx/build/_deps/googletest-build/googlemock && /usr/bin/ctest --force-new-ctest-process
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build _deps/googletest-build/googlemock/test: phony _deps/googletest-build/googlemock/CMakeFiles/test.util
+
+
+#############################################
+# Utility command for edit_cache
+
+build _deps/googletest-build/googlemock/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/sheep/Compiler/cx/build/_deps/googletest-build/googlemock && /usr/bin/ccmake -S/home/sheep/Compiler/cx -B/home/sheep/Compiler/cx/build
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build _deps/googletest-build/googlemock/edit_cache: phony _deps/googletest-build/googlemock/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build _deps/googletest-build/googlemock/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/sheep/Compiler/cx/build/_deps/googletest-build/googlemock && /usr/bin/cmake --regenerate-during-build -S/home/sheep/Compiler/cx -B/home/sheep/Compiler/cx/build
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build _deps/googletest-build/googlemock/rebuild_cache: phony _deps/googletest-build/googlemock/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build _deps/googletest-build/googlemock/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build _deps/googletest-build/googlemock/CMakeFiles/install.util: CUSTOM_COMMAND _deps/googletest-build/googlemock/all
+  COMMAND = cd /home/sheep/Compiler/cx/build/_deps/googletest-build/googlemock && /usr/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build _deps/googletest-build/googlemock/install: phony _deps/googletest-build/googlemock/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build _deps/googletest-build/googlemock/CMakeFiles/install/local.util: CUSTOM_COMMAND _deps/googletest-build/googlemock/all
+  COMMAND = cd /home/sheep/Compiler/cx/build/_deps/googletest-build/googlemock && /usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build _deps/googletest-build/googlemock/install/local: phony _deps/googletest-build/googlemock/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build _deps/googletest-build/googlemock/CMakeFiles/install/strip.util: CUSTOM_COMMAND _deps/googletest-build/googlemock/all
+  COMMAND = cd /home/sheep/Compiler/cx/build/_deps/googletest-build/googlemock && /usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build _deps/googletest-build/googlemock/install/strip: phony _deps/googletest-build/googlemock/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /home/sheep/Compiler/cx/build/_deps/googletest-src/googlemock/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target gtest
+
+
+#############################################
+# Order-only phony target for gtest
+
+build cmake_object_order_depends_target_gtest: phony || _deps/googletest-build/googletest/CMakeFiles/gtest.dir
+
+build _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o: CXX_COMPILER__gtest_unscanned_DEBUG /home/sheep/Compiler/cx/build/_deps/googletest-src/googletest/src/gtest-all.cc || cmake_object_order_depends_target_gtest
+  DEP_FILE = _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o.d
+  FLAGS = -g -std=c++23 -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -DDEBUG -Wall -Werror
+  INCLUDES = -I/home/sheep/Compiler/cx/build/_deps/googletest-src/googletest/include -I/home/sheep/Compiler/cx/build/_deps/googletest-src/googletest
+  OBJECT_DIR = _deps/googletest-build/googletest/CMakeFiles/gtest.dir
+  OBJECT_FILE_DIR = _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src
+  TARGET_COMPILE_PDB = lib/libgtestpdb_debug_postfix-NOTFOUND.pdb
+  TARGET_PDB = bin/libgtestpdb_debug_postfix-NOTFOUND.pdb
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target gtest
+
+
+#############################################
+# Link the static library lib/libgtest.a
+
+build lib/libgtest.a: CXX_STATIC_LIBRARY_LINKER__gtest_DEBUG _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = _deps/googletest-build/googletest/CMakeFiles/gtest.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_COMPILE_PDB = lib/libgtestpdb_debug_postfix-NOTFOUND.pdb
+  TARGET_FILE = lib/libgtest.a
+  TARGET_PDB = bin/libgtestpdb_debug_postfix-NOTFOUND.pdb
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target gtest_main
+
+
+#############################################
+# Order-only phony target for gtest_main
+
+build cmake_object_order_depends_target_gtest_main: phony || cmake_object_order_depends_target_gtest
+
+build _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o: CXX_COMPILER__gtest_main_unscanned_DEBUG /home/sheep/Compiler/cx/build/_deps/googletest-src/googletest/src/gtest_main.cc || cmake_object_order_depends_target_gtest_main
+  DEP_FILE = _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o.d
+  FLAGS = -g -std=c++23 -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -DDEBUG -Wall -Werror
+  INCLUDES = -isystem /home/sheep/Compiler/cx/build/_deps/googletest-src/googletest/include -isystem /home/sheep/Compiler/cx/build/_deps/googletest-src/googletest
+  OBJECT_DIR = _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir
+  OBJECT_FILE_DIR = _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src
+  TARGET_COMPILE_PDB = lib/libgtest_mainpdb_debug_postfix-NOTFOUND.pdb
+  TARGET_PDB = bin/libgtest_mainpdb_debug_postfix-NOTFOUND.pdb
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target gtest_main
+
+
+#############################################
+# Link the static library lib/libgtest_main.a
+
+build lib/libgtest_main.a: CXX_STATIC_LIBRARY_LINKER__gtest_main_DEBUG _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o || lib/libgtest.a
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_COMPILE_PDB = lib/libgtest_mainpdb_debug_postfix-NOTFOUND.pdb
+  TARGET_FILE = lib/libgtest_main.a
+  TARGET_PDB = bin/libgtest_mainpdb_debug_postfix-NOTFOUND.pdb
+
+
+#############################################
+# Utility command for test
+
+build _deps/googletest-build/googletest/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = cd /home/sheep/Compiler/cx/build/_deps/googletest-build/googletest && /usr/bin/ctest --force-new-ctest-process
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build _deps/googletest-build/googletest/test: phony _deps/googletest-build/googletest/CMakeFiles/test.util
+
+
+#############################################
+# Utility command for edit_cache
+
+build _deps/googletest-build/googletest/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/sheep/Compiler/cx/build/_deps/googletest-build/googletest && /usr/bin/ccmake -S/home/sheep/Compiler/cx -B/home/sheep/Compiler/cx/build
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build _deps/googletest-build/googletest/edit_cache: phony _deps/googletest-build/googletest/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build _deps/googletest-build/googletest/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/sheep/Compiler/cx/build/_deps/googletest-build/googletest && /usr/bin/cmake --regenerate-during-build -S/home/sheep/Compiler/cx -B/home/sheep/Compiler/cx/build
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build _deps/googletest-build/googletest/rebuild_cache: phony _deps/googletest-build/googletest/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build _deps/googletest-build/googletest/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build _deps/googletest-build/googletest/CMakeFiles/install.util: CUSTOM_COMMAND _deps/googletest-build/googletest/all
+  COMMAND = cd /home/sheep/Compiler/cx/build/_deps/googletest-build/googletest && /usr/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build _deps/googletest-build/googletest/install: phony _deps/googletest-build/googletest/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build _deps/googletest-build/googletest/CMakeFiles/install/local.util: CUSTOM_COMMAND _deps/googletest-build/googletest/all
+  COMMAND = cd /home/sheep/Compiler/cx/build/_deps/googletest-build/googletest && /usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build _deps/googletest-build/googletest/install/local: phony _deps/googletest-build/googletest/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build _deps/googletest-build/googletest/CMakeFiles/install/strip.util: CUSTOM_COMMAND _deps/googletest-build/googletest/all
+  COMMAND = cd /home/sheep/Compiler/cx/build/_deps/googletest-build/googletest && /usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build _deps/googletest-build/googletest/install/strip: phony _deps/googletest-build/googletest/CMakeFiles/install/strip.util
+
 # =============================================================================
 # Target aliases.
 
+build Continuous: phony lexcpp/Continuous
+
+build ContinuousBuild: phony lexcpp/ContinuousBuild
+
+build ContinuousConfigure: phony lexcpp/ContinuousConfigure
+
+build ContinuousCoverage: phony lexcpp/ContinuousCoverage
+
+build ContinuousMemCheck: phony lexcpp/ContinuousMemCheck
+
+build ContinuousStart: phony lexcpp/ContinuousStart
+
+build ContinuousSubmit: phony lexcpp/ContinuousSubmit
+
+build ContinuousTest: phony lexcpp/ContinuousTest
+
+build ContinuousUpdate: phony lexcpp/ContinuousUpdate
+
+build Experimental: phony lexcpp/Experimental
+
+build ExperimentalBuild: phony lexcpp/ExperimentalBuild
+
+build ExperimentalConfigure: phony lexcpp/ExperimentalConfigure
+
+build ExperimentalCoverage: phony lexcpp/ExperimentalCoverage
+
+build ExperimentalMemCheck: phony lexcpp/ExperimentalMemCheck
+
+build ExperimentalStart: phony lexcpp/ExperimentalStart
+
+build ExperimentalSubmit: phony lexcpp/ExperimentalSubmit
+
+build ExperimentalTest: phony lexcpp/ExperimentalTest
+
+build ExperimentalUpdate: phony lexcpp/ExperimentalUpdate
+
+build Nightly: phony lexcpp/Nightly
+
+build NightlyBuild: phony lexcpp/NightlyBuild
+
+build NightlyConfigure: phony lexcpp/NightlyConfigure
+
+build NightlyCoverage: phony lexcpp/NightlyCoverage
+
+build NightlyMemCheck: phony lexcpp/NightlyMemCheck
+
+build NightlyMemoryCheck: phony lexcpp/NightlyMemoryCheck
+
+build NightlyStart: phony lexcpp/NightlyStart
+
+build NightlySubmit: phony lexcpp/NightlySubmit
+
+build NightlyTest: phony lexcpp/NightlyTest
+
+build NightlyUpdate: phony lexcpp/NightlyUpdate
+
+build c.lex: phony lexcpp/c.lex
+
 build compiler: phony toolcpp/libcompiler.a
+
+build gmock: phony lib/libgmock.a
+
+build gmock_main: phony lib/libgmock_main.a
+
+build gtest: phony lib/libgtest.a
+
+build gtest_main: phony lib/libgtest_main.a
 
 build hash: phony toolcpp/libhash.a
 
@@ -528,6 +1508,14 @@ build lexio: phony lexcpp/liblexio.a
 
 build libcompiler.a: phony toolcpp/libcompiler.a
 
+build libgmock.a: phony lib/libgmock.a
+
+build libgmock_main.a: phony lib/libgmock_main.a
+
+build libgtest.a: phony lib/libgtest.a
+
+build libgtest_main.a: phony lib/libgtest_main.a
+
 build libhash.a: phony toolcpp/libhash.a
 
 build liblexio.a: phony lexcpp/liblexio.a
@@ -535,8 +1523,6 @@ build liblexio.a: phony lexcpp/liblexio.a
 build libset.a: phony toolcpp/libset.a
 
 build set: phony toolcpp/libset.a
-
-build setCompiler: phony toolcpp/setCompiler
 
 build setTest: phony toolcpp/setTest
 
@@ -553,6 +1539,27 @@ build all: phony lexcpp/all toolcpp/all
 # =============================================================================
 
 #############################################
+# Folder: /home/sheep/Compiler/cx/build/_deps/googletest-build
+
+build _deps/googletest-build/all: phony _deps/googletest-build/googlemock/all
+
+# =============================================================================
+
+#############################################
+# Folder: /home/sheep/Compiler/cx/build/_deps/googletest-build/googlemock
+
+build _deps/googletest-build/googlemock/all: phony lib/libgmock.a lib/libgmock_main.a _deps/googletest-build/googletest/all
+
+# =============================================================================
+
+#############################################
+# Folder: /home/sheep/Compiler/cx/build/_deps/googletest-build/googletest
+
+build _deps/googletest-build/googletest/all: phony lib/libgtest.a lib/libgtest_main.a
+
+# =============================================================================
+
+#############################################
 # Folder: /home/sheep/Compiler/cx/build/lexcpp
 
 build lexcpp/all: phony lexcpp/liblexio.a lexcpp/lex
@@ -562,7 +1569,7 @@ build lexcpp/all: phony lexcpp/liblexio.a lexcpp/lex
 #############################################
 # Folder: /home/sheep/Compiler/cx/build/toolcpp
 
-build toolcpp/all: phony toolcpp/libset.a toolcpp/libcompiler.a toolcpp/libhash.a toolcpp/setTest toolcpp/setCompiler toolcpp/hashTest
+build toolcpp/all: phony toolcpp/libset.a toolcpp/libcompiler.a toolcpp/libhash.a toolcpp/setTest toolcpp/hashTest _deps/googletest-build/all
 
 # =============================================================================
 # Built-in targets
@@ -571,14 +1578,14 @@ build toolcpp/all: phony toolcpp/libset.a toolcpp/libcompiler.a toolcpp/libhash.
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /home/sheep/Compiler/cx/CMakeLists.txt /home/sheep/Compiler/cx/lexcpp/CMakeLists.txt /home/sheep/Compiler/cx/toolcpp/CMakeLists.txt /usr/share/cmake/Modules/CMakeCCompiler.cmake.in /usr/share/cmake/Modules/CMakeCCompilerABI.c /usr/share/cmake/Modules/CMakeCInformation.cmake /usr/share/cmake/Modules/CMakeCXXCompiler.cmake.in /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp /usr/share/cmake/Modules/CMakeCXXInformation.cmake /usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake/Modules/CMakeCompilerIdDetection.cmake /usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake /usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake /usr/share/cmake/Modules/CMakeDetermineCompileFeatures.cmake /usr/share/cmake/Modules/CMakeDetermineCompiler.cmake /usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake /usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake /usr/share/cmake/Modules/CMakeDetermineSystem.cmake /usr/share/cmake/Modules/CMakeFindBinUtils.cmake /usr/share/cmake/Modules/CMakeGenericSystem.cmake /usr/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/share/cmake/Modules/CMakeNinjaFindMake.cmake /usr/share/cmake/Modules/CMakeParseImplicitIncludeInfo.cmake /usr/share/cmake/Modules/CMakeParseImplicitLinkInfo.cmake /usr/share/cmake/Modules/CMakeParseLibraryArchitecture.cmake /usr/share/cmake/Modules/CMakeSystem.cmake.in /usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake/Modules/CMakeTestCCompiler.cmake /usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake /usr/share/cmake/Modules/CMakeTestCompilerCommon.cmake /usr/share/cmake/Modules/Compiler/ADSP-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/ARMCC-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/ARMClang-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/AppleClang-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/Borland-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake/Modules/Compiler/Clang-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /usr/share/cmake/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/Cray-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/CrayClang-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/GHS-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/GNU-C-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/GNU-C.cmake /usr/share/cmake/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake /usr/share/cmake/Modules/Compiler/GNU.cmake /usr/share/cmake/Modules/Compiler/HP-C-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/IAR-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /usr/share/cmake/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /usr/share/cmake/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/Intel-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/LCC-C-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/MSVC-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/NVHPC-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/OrangeC-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/PGI-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/PathScale-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/SCO-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/TI-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/Tasking-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/Watcom-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/XL-C-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/zOS-C-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /usr/share/cmake/Modules/Internal/FeatureTesting.cmake /usr/share/cmake/Modules/Platform/Linux-Determine-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU.cmake /usr/share/cmake/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake/Modules/Platform/Linux.cmake /usr/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.28.3/CMakeCCompiler.cmake CMakeFiles/3.28.3/CMakeCXXCompiler.cmake CMakeFiles/3.28.3/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /home/sheep/Compiler/cx/CMakeLists.txt /home/sheep/Compiler/cx/lexcpp/CMakeLists.txt /home/sheep/Compiler/cx/toolcpp/CMakeLists.txt /usr/share/cmake/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /usr/share/cmake/Modules/CMakeCCompiler.cmake.in /usr/share/cmake/Modules/CMakeCCompilerABI.c /usr/share/cmake/Modules/CMakeCInformation.cmake /usr/share/cmake/Modules/CMakeCXXCompiler.cmake.in /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp /usr/share/cmake/Modules/CMakeCXXInformation.cmake /usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake/Modules/CMakeCompilerIdDetection.cmake /usr/share/cmake/Modules/CMakeDependentOption.cmake /usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake /usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake /usr/share/cmake/Modules/CMakeDetermineCompileFeatures.cmake /usr/share/cmake/Modules/CMakeDetermineCompiler.cmake /usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake /usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake /usr/share/cmake/Modules/CMakeDetermineSystem.cmake /usr/share/cmake/Modules/CMakeFindBinUtils.cmake /usr/share/cmake/Modules/CMakeGenericSystem.cmake /usr/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/share/cmake/Modules/CMakeNinjaFindMake.cmake /usr/share/cmake/Modules/CMakePackageConfigHelpers.cmake /usr/share/cmake/Modules/CMakeParseImplicitIncludeInfo.cmake /usr/share/cmake/Modules/CMakeParseImplicitLinkInfo.cmake /usr/share/cmake/Modules/CMakeParseLibraryArchitecture.cmake /usr/share/cmake/Modules/CMakeSystem.cmake.in /usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake/Modules/CMakeTestCCompiler.cmake /usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake /usr/share/cmake/Modules/CMakeTestCompilerCommon.cmake /usr/share/cmake/Modules/CTest.cmake /usr/share/cmake/Modules/CTestTargets.cmake /usr/share/cmake/Modules/CTestUseLaunchers.cmake /usr/share/cmake/Modules/CheckCSourceCompiles.cmake /usr/share/cmake/Modules/CheckIncludeFile.cmake /usr/share/cmake/Modules/CheckLibraryExists.cmake /usr/share/cmake/Modules/Compiler/ADSP-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/ARMCC-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/ARMClang-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/AppleClang-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/Borland-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake/Modules/Compiler/Clang-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /usr/share/cmake/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/Cray-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/CrayClang-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/GHS-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/GNU-C-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/GNU-C.cmake /usr/share/cmake/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake /usr/share/cmake/Modules/Compiler/GNU.cmake /usr/share/cmake/Modules/Compiler/HP-C-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/IAR-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /usr/share/cmake/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /usr/share/cmake/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/Intel-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/LCC-C-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/MSVC-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/NVHPC-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/OrangeC-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/PGI-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/PathScale-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/SCO-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/TI-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/Tasking-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/Watcom-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/XL-C-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/zOS-C-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /usr/share/cmake/Modules/DartConfiguration.tcl.in /usr/share/cmake/Modules/ExternalProject/shared_internal_commands.cmake /usr/share/cmake/Modules/FetchContent.cmake /usr/share/cmake/Modules/FetchContent/CMakeLists.cmake.in /usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake/Modules/FindPackageMessage.cmake /usr/share/cmake/Modules/FindPython.cmake /usr/share/cmake/Modules/FindPython/Support.cmake /usr/share/cmake/Modules/FindThreads.cmake /usr/share/cmake/Modules/GNUInstallDirs.cmake /usr/share/cmake/Modules/GoogleTest.cmake /usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake /usr/share/cmake/Modules/Internal/FeatureTesting.cmake /usr/share/cmake/Modules/Platform/Linux-Determine-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU.cmake /usr/share/cmake/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake/Modules/Platform/Linux.cmake /usr/share/cmake/Modules/Platform/UnixPaths.cmake /usr/share/cmake/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.28.3/CMakeCCompiler.cmake CMakeFiles/3.28.3/CMakeCXXCompiler.cmake CMakeFiles/3.28.3/CMakeSystem.cmake _deps/googletest-src/CMakeLists.txt _deps/googletest-src/googlemock/CMakeLists.txt _deps/googletest-src/googlemock/cmake/gmock.pc.in _deps/googletest-src/googlemock/cmake/gmock_main.pc.in _deps/googletest-src/googletest/CMakeLists.txt _deps/googletest-src/googletest/cmake/Config.cmake.in _deps/googletest-src/googletest/cmake/gtest.pc.in _deps/googletest-src/googletest/cmake/gtest_main.pc.in _deps/googletest-src/googletest/cmake/internal_utils.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/sheep/Compiler/cx/CMakeLists.txt /home/sheep/Compiler/cx/lexcpp/CMakeLists.txt /home/sheep/Compiler/cx/toolcpp/CMakeLists.txt /usr/share/cmake/Modules/CMakeCCompiler.cmake.in /usr/share/cmake/Modules/CMakeCCompilerABI.c /usr/share/cmake/Modules/CMakeCInformation.cmake /usr/share/cmake/Modules/CMakeCXXCompiler.cmake.in /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp /usr/share/cmake/Modules/CMakeCXXInformation.cmake /usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake/Modules/CMakeCompilerIdDetection.cmake /usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake /usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake /usr/share/cmake/Modules/CMakeDetermineCompileFeatures.cmake /usr/share/cmake/Modules/CMakeDetermineCompiler.cmake /usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake /usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake /usr/share/cmake/Modules/CMakeDetermineSystem.cmake /usr/share/cmake/Modules/CMakeFindBinUtils.cmake /usr/share/cmake/Modules/CMakeGenericSystem.cmake /usr/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/share/cmake/Modules/CMakeNinjaFindMake.cmake /usr/share/cmake/Modules/CMakeParseImplicitIncludeInfo.cmake /usr/share/cmake/Modules/CMakeParseImplicitLinkInfo.cmake /usr/share/cmake/Modules/CMakeParseLibraryArchitecture.cmake /usr/share/cmake/Modules/CMakeSystem.cmake.in /usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake/Modules/CMakeTestCCompiler.cmake /usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake /usr/share/cmake/Modules/CMakeTestCompilerCommon.cmake /usr/share/cmake/Modules/Compiler/ADSP-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/ARMCC-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/ARMClang-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/AppleClang-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/Borland-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake/Modules/Compiler/Clang-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /usr/share/cmake/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/Cray-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/CrayClang-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/GHS-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/GNU-C-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/GNU-C.cmake /usr/share/cmake/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake /usr/share/cmake/Modules/Compiler/GNU.cmake /usr/share/cmake/Modules/Compiler/HP-C-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/IAR-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /usr/share/cmake/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /usr/share/cmake/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/Intel-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/LCC-C-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/MSVC-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/NVHPC-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/OrangeC-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/PGI-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/PathScale-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/SCO-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/TI-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/Tasking-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/Watcom-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/XL-C-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/zOS-C-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /usr/share/cmake/Modules/Internal/FeatureTesting.cmake /usr/share/cmake/Modules/Platform/Linux-Determine-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU.cmake /usr/share/cmake/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake/Modules/Platform/Linux.cmake /usr/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.28.3/CMakeCCompiler.cmake CMakeFiles/3.28.3/CMakeCXXCompiler.cmake CMakeFiles/3.28.3/CMakeSystem.cmake: phony
+build /home/sheep/Compiler/cx/CMakeLists.txt /home/sheep/Compiler/cx/lexcpp/CMakeLists.txt /home/sheep/Compiler/cx/toolcpp/CMakeLists.txt /usr/share/cmake/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /usr/share/cmake/Modules/CMakeCCompiler.cmake.in /usr/share/cmake/Modules/CMakeCCompilerABI.c /usr/share/cmake/Modules/CMakeCInformation.cmake /usr/share/cmake/Modules/CMakeCXXCompiler.cmake.in /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp /usr/share/cmake/Modules/CMakeCXXInformation.cmake /usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake/Modules/CMakeCompilerIdDetection.cmake /usr/share/cmake/Modules/CMakeDependentOption.cmake /usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake /usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake /usr/share/cmake/Modules/CMakeDetermineCompileFeatures.cmake /usr/share/cmake/Modules/CMakeDetermineCompiler.cmake /usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake /usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake /usr/share/cmake/Modules/CMakeDetermineSystem.cmake /usr/share/cmake/Modules/CMakeFindBinUtils.cmake /usr/share/cmake/Modules/CMakeGenericSystem.cmake /usr/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/share/cmake/Modules/CMakeNinjaFindMake.cmake /usr/share/cmake/Modules/CMakePackageConfigHelpers.cmake /usr/share/cmake/Modules/CMakeParseImplicitIncludeInfo.cmake /usr/share/cmake/Modules/CMakeParseImplicitLinkInfo.cmake /usr/share/cmake/Modules/CMakeParseLibraryArchitecture.cmake /usr/share/cmake/Modules/CMakeSystem.cmake.in /usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake/Modules/CMakeTestCCompiler.cmake /usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake /usr/share/cmake/Modules/CMakeTestCompilerCommon.cmake /usr/share/cmake/Modules/CTest.cmake /usr/share/cmake/Modules/CTestTargets.cmake /usr/share/cmake/Modules/CTestUseLaunchers.cmake /usr/share/cmake/Modules/CheckCSourceCompiles.cmake /usr/share/cmake/Modules/CheckIncludeFile.cmake /usr/share/cmake/Modules/CheckLibraryExists.cmake /usr/share/cmake/Modules/Compiler/ADSP-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/ARMCC-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/ARMClang-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/AppleClang-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/Borland-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake/Modules/Compiler/Clang-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /usr/share/cmake/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/Cray-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/CrayClang-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/GHS-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/GNU-C-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/GNU-C.cmake /usr/share/cmake/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake /usr/share/cmake/Modules/Compiler/GNU.cmake /usr/share/cmake/Modules/Compiler/HP-C-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/IAR-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /usr/share/cmake/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /usr/share/cmake/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/Intel-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/LCC-C-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/MSVC-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/NVHPC-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/OrangeC-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/PGI-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/PathScale-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/SCO-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/TI-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/Tasking-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/Watcom-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/XL-C-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/zOS-C-DetermineCompiler.cmake /usr/share/cmake/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /usr/share/cmake/Modules/DartConfiguration.tcl.in /usr/share/cmake/Modules/ExternalProject/shared_internal_commands.cmake /usr/share/cmake/Modules/FetchContent.cmake /usr/share/cmake/Modules/FetchContent/CMakeLists.cmake.in /usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake/Modules/FindPackageMessage.cmake /usr/share/cmake/Modules/FindPython.cmake /usr/share/cmake/Modules/FindPython/Support.cmake /usr/share/cmake/Modules/FindThreads.cmake /usr/share/cmake/Modules/GNUInstallDirs.cmake /usr/share/cmake/Modules/GoogleTest.cmake /usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake /usr/share/cmake/Modules/Internal/FeatureTesting.cmake /usr/share/cmake/Modules/Platform/Linux-Determine-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU.cmake /usr/share/cmake/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake/Modules/Platform/Linux.cmake /usr/share/cmake/Modules/Platform/UnixPaths.cmake /usr/share/cmake/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.28.3/CMakeCCompiler.cmake CMakeFiles/3.28.3/CMakeCXXCompiler.cmake CMakeFiles/3.28.3/CMakeSystem.cmake _deps/googletest-src/CMakeLists.txt _deps/googletest-src/googlemock/CMakeLists.txt _deps/googletest-src/googlemock/cmake/gmock.pc.in _deps/googletest-src/googlemock/cmake/gmock_main.pc.in _deps/googletest-src/googletest/CMakeLists.txt _deps/googletest-src/googletest/cmake/Config.cmake.in _deps/googletest-src/googletest/cmake/gtest.pc.in _deps/googletest-src/googletest/cmake/gtest_main.pc.in _deps/googletest-src/googletest/cmake/internal_utils.cmake: phony
 
 
 #############################################

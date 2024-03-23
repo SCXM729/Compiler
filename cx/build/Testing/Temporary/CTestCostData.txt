@@ -1,0 +1,5 @@
+settest 13 0.054899
+hashTest 0 0
+hashtest 6 0.128175
+lexMem 38 0.0313976
+---

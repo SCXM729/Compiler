@@ -3,11 +3,7 @@ project(lexcpp)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_CXX_STANDARD 23)
-set(CMAKE_BUILD_TYPE DEBUG)
-
-# include googletest
-include_directories(~/googletest/build/install/include)
-link_directories(~/googletest/build/install/lib)
+set(CMAKE_BUILD_TYPE Debug)
 
 # find set compiler hash library 
 # find_library(tools NAMES libtools.a HINTS ../toolcpp/build)
@@ -35,23 +31,19 @@ add_executable(lex)
 target_sources(lex PUBLIC lex.cpp)
 target_include_directories(lex PUBLIC ../toolcpp)
 
-target_link_libraries(
-    lex
-    lexio
-    set
-    hash
-    compiler
-    # ${tools}
-    gtest
-    gtest_main
-    gmock
-    gmock_main
+target_link_libraries(lex lexio set hash compiler)
+include(CTest)
+enable_testing()
+find_program(MEMORYCHECK_COMMAND NAMES valgrind)
+set(MEMORYCHECK_COMMAND_OPTIONS
+    "--track-origins=yes --leak-check=full --show-leak-kinds=all"
 )
-add_custom_command(
-    TARGET lex
-    POST_BUILD
+add_test(NAME lexMem COMMAND $<TARGET_FILE:lex>)
+
+add_custom_target(
+    c.lex
     COMMAND
-        valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes
-        ./lex
-    COMMENT "memory check "
+        ${CMAKE_COMMAND} -E copy ${CMAKE_CURRENT_SOURCE_DIR}/c.lex
+        ${CMAKE_CURRENT_BINARY_DIR}/c.lex
 )
+add_dependencies(lex c.lex)
